@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EVE-Survival: An EFT Primer or "How to use the simulator"
+</title>
+	<base href="./" />
+	<meta name="generator" content="WikkaWiki" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="Eve missions, R and L Electronics" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/wikka.css?a8278" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/print.css" media="print" />
+	<link rel="icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: revisions for EftPrimer (RSS)" href="./EftPrimer.html/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: recently edited pages (RSS)" href="./EftPrimer.html/recentchanges.xml" />
+</head>
+<body>
+<!-- BEGIN PAGE WRAPPER -->
+<div id="page">
+<!-- BEGIN PAGE HEADER -->
+<div id="header">
+<h2><a id="homepage_link" href="./HomePage.html">EVE-Survival</a> : <a href="./EftPrimer.html/backlinks" title="Display a list of pages linking to EftPrimer">EftPrimer</a></h2>
+<ul id="main_menu">
+<li><a class="" href="./MissionReports.html">MissionReports</a>
+</li>
+<li><a class="" href="./PageIndex.html">PageIndex</a>
+</li>
+<li><a class="" href="./RecentChanges.html">RecentChanges</a>
+</li>
+<li><a class="" href="./RecentlyCommented.html">RecentlyCommented</a>
+</li>
+<li><a class="" href="./UserSettings.html">Login/Register</a>
+</li>
+<li><form action="./TextSearch.html" id="form_c2b696fff2">
+<label for="searchbox">Search: </label><input id="searchbox" name="phrase" size="15" class="searchbox" /><input name="wakka" type="hidden" value="TextSearch" /></form>
+
+</li>
+<li>Your hostname is <tt>207.237.82.100</tt>
+</li>
+</ul>
+</div>
+<!-- END PAGE HEADER -->
+<!-- BEGIN PAGE CONTENT -->
+<div id="content">
+<h1><strong>An EFT Primer or "How to use the simulator"</strong></h1>
+
+<br />
+A guide by Aroc SyllinBeh<br />
+<br />
+<h4><strong><span class="underline">1. Get Yourself in the Machine:</span></strong></h4>
+
+<br />
+To know how a ship setup reacts, what its characteristics are, and if you can fly it, you need to have your skill set imported into EFT.<br />
+<br />
+<ul><li> Go to the View menu and choose "Character Editor".
+</li><li> Click on "Create New Character" (first button)
+</li><li> Enter a name for that character.
+</li><li> Click on "Import"
+</li><li> You now see an User ID and an API Key field.</li></ul>
+<br />
+<ul><li> Get your API key <a class="ext" href="http://myeve.eve-online.com/api/default.asp">here</a>
+</li><li> Enter it in the fields and click "connect".
+</li><li> You now see a popup with your character(s); choose the right one and click "OK."
+</li><li> You should also tick the "save use ID" option so you can later update your character when new skills are trained (by going there again and importing it again).
+</li><li> Close the character editor when done.</li></ul>
+<br />
+<h4><strong><span class="underline">2. Choose a Ship:</span></strong></h4>
+
+<br />
+Go to File and choose "Open Ship Browser". Alternatively you can double-click in the grey central area.<br />
+<br />
+You now see a list of all the ships. Go to the categories on the right and double click the ship you want to setup.<br />
+<br />
+If there is no previous setup for that ship, EFT will ask if you want to create a new one, click "yes" then enter a name for your setup.<br />
+<br />
+Naming convention depends on your personal preferences, however I found it useful to do it like this:<br />
+<br />
+[USE] - [key points]<br />
+<br />
+Examples:<br />
+<br />
+<ul><li> PVE - 2*LAR perma tank
+</li><li> PVE - Artillery
+</li><li> PVP - NOS/Neut LAR+1600Plate</li></ul>
+<br />
+etc.<br />
+<br />
+<h4><strong><span class="underline">3. Setting Up:</span></strong></h4>
+
+<br />
+Once you click "OK" on the name popup a fitting window opens.<br />
+<br />
+The first thing you should do now is choose your character (or the one who will fly the ship) from the "Character" drop down menu.<br />
+<br />
+In the example ou'll see there is an "All Level V" character listed, it's obviously a character with all skills to 5, which is the best you can aim for.<br />
+<br />
+You can download an "All Level 4" character <a class="missingpage" href="./url.html/edit" title="Create this page">here here</a>. Close EFT and copy that file in the /EFT/Characters/ directory on your hard drive. It's a "more realistic" version of the level 5 character.<br />
+<br />
+For now, just choose your character from the drop down list.<br />
+<br />
+You will see a list of all available modules for your ship on the left .<br />
+<br />
+Start adding modules until you're happy.<br />
+<br />
+If you click on "Active Drones" in the bottom left, you can see drones used in the calculations. You can add drones like modules by double clicking them from the list on the left.<br />
+<br />
+<h4><strong><span class="underline">4. The Information Panel:</span></strong></h4>
+
+<br />
+The panel on the right of the fitting window gives you detailed information about the fit. Here is a legend explaining it:<br />
+<br />
+<h5><span class="underline">4.1. Armor, Shield and Defense:</span></h5>
+
+<br />
+This section contains all the tanking information of your setup.<br />
+<br />
+The Hitpoints are not the hull, armor, and shield HP of your ship added up, but those numbers compounded with their respective average resistance. That number gives you an idea of your ship's survivability if hit by the currently selected dmg profile (more on damage profiles later).<br />
+<br />
+If you hover your mouse on the shield, armor, or hull icons, you'll see a popup with additional information, like peak shield regen and hull resists.<br />
+<br />
+The resistance icons are self explanatory.<br />
+<br />
+Defense gives you the total DPS your active tank (repper/booster/passive regen) can sustain if hit by the current damage profile.<br />
+<br />
+The bottom defense number is the amount your tank sustains if it "perma runs," the top number is what your tank sustains if you have to pulse it, waiting for cap to recharge.<br />
+<br />
+<h5><span class="underline">4.2. Capacitor:</span></h5>
+
+<br />
+Capacitor, like shield, doesn't recharge linearly; it has a peak recharge value which is roughly 2.4*(HP/recharge time).<br />
+<br />
+The recharge rate is lower than that peak amount when cap is full and it rises when cap lowers. Once the sweet spot is hit (around 33% of your total cap) the recharge is at its max. When you go lower than 33%, the recharge rate starts to diminish again.<br />
+<br />
+It's that peak value which is listed under positive capacitor balance.<br />
+<br />
+As with shield, hovering on the capacitor icon gives you total cap HP and recharge time.<br />
+<br />
+For your tank to perma run, the positive number must be higher than the negative number. When that happens, the two defense amounts should be the same, which is the max DPS you can sustain.<br />
+<br />
+Actually, for your tank to really perma run, the positive number should be slightly higher than the negative number because if your repper/booster takes a chunk of cap and you end up under the peak sweet spot (33% total cap), the recharge rate will start to lower.<br />
+<br />
+<h5><span class="underline">4.3. Damage:</span></h5>
+
+<br />
+The top number is your total damage per second, including all your weapons and drones.<br />
+<br />
+If you hover on the icon, you'll see the damage repartition between guns, missiles and drones.<br />
+<br />
+The bottom number is your volley (or alpha) damage, the damage done when all your weapons hit together for the first time. If you have guns, missiles are not accounted for in the volley damage. However if you have only missiles they are accounted in the volley. Drones are never accounted for in that number.<br />
+<br />
+<h4><strong><span class="underline">5. Drones:</span></strong></h4>
+
+<br />
+If you right click a drone group in the fitting window you can choose to activate/deactivate one drone. It is then shown as a separate group. That allows you to see the effect of combining drone types (1 Med and 4 lights opposed to 3 Meds for example)<br />
+<br />
+<h4><strong><span class="underline">6. Gang Bonuses:</span></strong></h4>
+
+<br />
+If you imported your fleet commander character, you can choose him here and see the effects of his bonuses on your setup.<br />
+<br />
+<h4><strong><span class="underline">7. Projected Effects:</span></strong></h4>
+
+<br />
+This allows you to drag and drop an Electronic Warfare module from another setup window or from the module list and see how it affects your setup (a tracking disruptor or a sensor dampener for example).<br />
+<br />
+This doesn't work with ECM drones at the moment.<br />
+<br />
+<h4><strong><span class="underline">8. Ammo:</span></strong></h4>
+
+<br />
+If you right click any module using ammo in the fitting window, you can choose the ammo it'll use and see the corresponding effects it has on range, capacitor boost, etc.<br />
+<br />
+<h4><strong><span class="underline">9. On/Off:</span></strong></h4>
+
+<br />
+By ticking the green check mark next to an active module you can turn it on or off and see the corresponding effects.<br />
+<br />
+By CTRL+left clicking the check mark you can offline the module altogether.<br />
+<br />
+<h4><strong><span class="underline">10. Skills:</span></strong></h4>
+
+<br />
+If you put a module you can't use in your setup, the box next to the character drop down will turn red. Hover your mouse on it to see which skill(s)/level you are missing.<br />
+<br />
+By right clicking a module in the fitting window you can see a list of the skills affecting said module and change the skill level to see it's effect(s) on the setup.<br />
+<br />
+You can similarly change other skills by right clicking anywhere in the central zone where the modules are (but not on any module).<br />
+<br />
+<h4><strong><span class="underline">11. Damage Profiles:</span></strong></h4>
+
+<br />
+If you right click the defense icon you can make new damage profiles ("edit custom profiles").<br />
+<br />
+It is useful, for example, to simulate you being hit with multiple damage type ammos (like projectiles, laser crystals, hybrid charges, etc.)<br />
+<br />
+The popup is self explanatory.<br />
+<br />
+You may enter the damage amounts in the corresponding fields and EFT calculates the proportions for you.<br />
+<br />
+It's also useful to simulate NPC damage during a mission. I compiled the DPS amounts from eve-info for all NPC types and made some custom damage profiles. This allows you to test your hardening module combinations against specific NPCs.<br />
+<br />
+If you're interested in these damage profiles, go have a look at the article I wrote <a class="" href="./TankingGuide.html">here</a><br />
+<br />
+<h4><strong><span class="underline">12. Bonus:</span></strong></h4>
+
+<br />
+If you left click anywhere in the central zone of the fitting window then hit CTRL+, the module columns set themselves so that you can see all the text and numbers.<br />
+<br />
+The same works for the bottom left panel where the module banks are.<br />
+<br />
+If you right-click then drag-n-drop a module to another slot (of the same level) you're presented with a popup menu to choose "move", "copy" or "swap".<br />
+<br />
+<h4><strong><span class="underline">13. Exporting:</span></strong></h4>
+
+<br />
+When you exit the program it writes your setups to text files which are stored in the /EFT/setups/ directory. These are named like this: shiptype.cfg<br />
+<br />
+If you open those files in a text editor you can see and manipulate, or copy/paste the setups.<br />
+<br />
+So to give a setup to someone just send him the corresponding .cfg file.<br />
+<br />
+If that person has no setups for that ship yet he can simply copy the file to his /EFT/setups/ directory. If he has setups for that ship already, he should open his .cfg in a text editor and copy/paste the content of yours in it.<br />
+<br />
+Be careful though as it seems EFT has a nasty habit of bugging quite hard (error popup at start, strange behavior, etc.) if you don't leave some blank lines at the bottom of the config files (that's the prob as far as I can tell).<br />
+<br />
+Well, that covers it I believe.<br />
+<br />
+Props to Gripen for making such a nice tool, it really betters the game experience.<br />
+<br />
+Send him isk guys, I certainly did.
+<div style="clear: both"></div>
+</div>
+<!-- END PAGE CONTENT -->
+<!-- BEGIN COMMENT BLOCK -->
+<div id="comments">
+<div id="commentheader">
+Comments [<a href="./EftPrimer.html&amp;show_comments=0">Hide comments/form</a>]
+</div>
+<div id="commentform">
+</div>
+</div>
+<!-- END COMMENT BLOCK -->
+<table align="right"><tr>
+<td align='left' ><a href='http://www.randl.com/shop/catalog/product_info.php?products_id=71597'>R and L Electronics has a FTDX5000MPLTD</a><br>YAESU FTDX5000MPLTD, FTDX-5000MPLTD , HF/6m 200W with TCXO/300Hz ROOFING FILTER<br></td></tr></table>
+<!-- BEGIN PAGE FOOTER -->
+<div id="footer">
+<ul id="options_menu">
+<li><a href="./EftPrimer.html/showcode" title="Display the markup for this page">[Source]</a>
+</li>
+<li><a href="./EftPrimer.html/history" title="Click to view recent edits to this page">[History]</a>
+
+</li>
+<li><a class="datetime" href="./EftPrimer.html/revisions" title="Click to view recent revisions list for this page">2010-07-18 16:59:54</a> <a href="./EftPrimer.html/revisions.xml" title="Click to display a feed with the latest revisions to this page"><img src="images/feed.png" class="icon" width="14" height="14" alt="feed icon" /></a>
+</li>
+<li>Owner: <a class="missingpage" href="./ArocSyllinBeh.html/edit" title="Create this page">ArocSyllinBeh</a>
+
+</li>
+</ul>
+</div>
+<!-- END PAGE FOOTER -->
+<!-- BEGIN SYSTEM INFO -->
+<div id="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">WikkaWiki </a>
+
+</div>
+<!-- END SYSTEM INFO -->
+<!--Page was generated in 3.2912 seconds-->
+</div>
+<!-- END PAGE WRAPPER -->
+
+</body>
+</html>

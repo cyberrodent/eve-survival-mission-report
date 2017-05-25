@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EVE-Survival: Wikka Formatting Guide
+</title>
+	<base href="./" />
+	<meta name="generator" content="WikkaWiki" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="Eve missions, R and L Electronics" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/wikka.css?a8278" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/print.css" media="print" />
+	<link rel="icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: revisions for FormattingRules (RSS)" href="./FormattingRules.html/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: recently edited pages (RSS)" href="./FormattingRules.html/recentchanges.xml" />
+</head>
+<body>
+<!-- BEGIN PAGE WRAPPER -->
+<div id="page">
+<!-- BEGIN PAGE HEADER -->
+<div id="header">
+<h2><a id="homepage_link" href="./HomePage.html">EVE-Survival</a> : <a href="./FormattingRules.html/backlinks" title="Display a list of pages linking to FormattingRules">FormattingRules</a></h2>
+<ul id="main_menu">
+<li><a class="" href="./MissionReports.html">MissionReports</a>
+</li>
+<li><a class="" href="./PageIndex.html">PageIndex</a>
+</li>
+<li><a class="" href="./RecentChanges.html">RecentChanges</a>
+</li>
+<li><a class="" href="./RecentlyCommented.html">RecentlyCommented</a>
+</li>
+<li><a class="" href="./UserSettings.html">Login/Register</a>
+</li>
+<li><form action="./TextSearch.html" id="form_c2b696fff2">
+<label for="searchbox">Search: </label><input id="searchbox" name="phrase" size="15" class="searchbox" /><input name="wakka" type="hidden" value="TextSearch" /></form>
+
+</li>
+<li>Your hostname is <tt>207.237.82.100</tt>
+</li>
+</ul>
+</div>
+<!-- END PAGE HEADER -->
+<!-- BEGIN PAGE CONTENT -->
+<div id="content">
+<h1>Wikka Formatting Guide</h1>
+<br /><div class="floatl">
+<h4>General Guidelines</h4>
+If a markup sequence is not in these guidelines, then it is not officially supported. Use caution when implementing markup that is not officially supported by this document, as undocumented functionality may change with version updates.<br /> <br />Unless otherwise stated in these guidelines, all markup is line based, that is, a newline character should not intervene. These are identified as 'inline' markup.
+</div>
+<div class="clear">&nbsp;</div>
+<br /><h4>Escaping Markup</h4>
+<br />Anything between 2 sets of double-quotes is not formatted.
+This is the equivalent of escaping a character(s):<br /> <br /><div class="floatl">
+<br />
+<div class="indent"><tt>**two bold &#34&#34**&#34&#34 stars**</tt></div>
+<br />
+<div class="indent"><strong>two bold ** stars</strong></div>
+
+</div>
+In this case, the second set of ** (escaped) stars will be ignored, <em>i.e.,</em> will not terminate the bold markup.<br /> <br />You can also use double-quote escaping to avoid linking of CamelCase words, e.g.<br /><div class="floatl">
+<br />
+<div class="indent"><tt>&quot;&quot;WikiWord&quot;&quot; is not parsed as a link</tt></div>
+<br />
+<div class="indent">WikiWord is not parsed as a link</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<h4>1. Text Formatting</h4>
+<br /><div class="floatl">
+
+<div class="indent"><tt>**I'm bold**</tt></div>
+<br />
+<div class="indent"><strong>I'm bold</strong></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>//I'm italic text!//</tt></div>
+<br />
+<div class="indent"><em>I'm italic text!</em></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>__And I'm underlined!__</tt></div>
+<br />
+<div class="indent"><span class="underline">And I'm underlined!</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>##Monospace text##</tt></div>
+<br />
+<div class="indent"><tt>Monospace text</tt></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>''Highlighted text''</tt> (using 2 single quotes)</div>
+<br />
+<div class="indent"><span class="notes">Highlighted text</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>++Strike through text++</tt></div>
+<br />
+<div class="indent"><span class="strikethrough">Strike through text</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>&pound;&pound;Text insertion&pound;&pound;</tt></div>
+<br />
+<div class="indent"> <ins>Text insertion</ins></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>&yen;&yen;Text deletion&yen;&yen;</tt></div>
+<br />
+<div class="indent"> <del>Text deletion</del></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>#%Press any key#%</tt></div>
+<br />
+<div class="indent"><kbd class="keys">Press any key</kbd></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>@@Center text@@</tt></div>
+<br />
+<div class="indent"><div class="center">
+Center text
+</div>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+Elides (hides) content from displaying.  Eliminates trailing whitespace so there are no unsightly gaps in output. Useful for commenting Wikka markup.<br /><div class="floatl">
+<br />
+<div class="indent"><tt>/*Elided content (eliminates trailing whitespace)*/</tt></div>
+<br />
+<div class="indent">/*Elided content (eliminates trailing whitespace)*/</div>
+<br />
+&lt;--<em>there was a comment here followed by whitespace in the markup</em><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+Elides (hides) content from displaying.  Preserves trailing<br />
+whitespace (note the gap).<br /><div class="floatl">
+<br />
+<div class="indent"><tt>``Elided content (preserves trailing whitespace)``</tt></div>
+<br />
+<div class="indent">``Elided content (preserves trailing whitespace)``</div>
+<br />
+&lt;--<em>there was a comment here followed by ws in the markup</em><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><h4>2. Headers</h4>
+<br />Use between six <tt>=</tt> (for the biggest header) and two <tt>=</tt> (for the smallest header) on both sides of a text to render it as a header.<br /> <br /><div class="floatl">
+
+<div class="indent"><tt>======Really big header======</tt></div>
+<br />
+<div class="indent"><h1>Really big header</h1>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>=====Rather big header=====</tt></div>
+<br />
+<div class="indent"><h2>Rather big header</h2>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>====Medium header====</tt></div>
+<br />
+<div class="indent"><h3>Medium header</h3>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>===Not-so-big header===</tt></div>
+<br />
+<div class="indent"><h4>Not-so-big header</h4>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>==Smallish header==</tt></div>
+<br />
+<div class="indent"><h5>Smallish header</h5>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><h4>3. Horizontal separator</h4>
+
+<div class="indent"><tt>----</tt></div>
+<br />
+<hr />
+
+<br /><h4>4. Forced line break</h4>
+<br />
+<div class="indent"><tt>Line 1---Line 2</tt></div>
+<br />
+Line 1<br />Line 2<br />
+<br /><h4>5. Lists and indents</h4>
+<br />You can indent text using a tilde (~), a tab, or four spaces (which will auto-convert into a tab).<br /><div class="floatl">
+
+<tt>~This text is indented<br />~~This text is double-indented<br />&nbsp;&nbsp;&nbsp;&nbsp;This text is also indented</tt> 
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent">This text is indented<br />
+<div class="indent">This text is double-indented<br />
+</div>This text is also indented</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br />To create bulleted/ordered lists, use the following markup (you can always use 4 spaces instead of a tilde):<br /> <br /><strong>Bulleted lists</strong><br /><div class="floatl">
+<br />
+<tt>~- Line one</tt><br />
+<tt>~- Line two</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ul><li> Line one
+</li><li> Line two</li></ul>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><strong>Numbered lists</strong><br /><div class="floatl">
+<br />
+<tt>~1) Line one</tt><br />
+<tt>~1) Line two</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ol type="1"><li> Line one
+</li><li> Line two</li></ol>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><strong>Ordered lists using uppercase characters</strong><br /><div class="floatl">
+<br />
+<tt>~A) Line one</tt><br />
+<tt>~A) Line two</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ol type="A"><li> Line one 
+</li><li> Line two </li></ol>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><strong>Ordered lists using lowercase characters</strong><br /><div class="floatl">
+<br />
+<tt>~a) Line one</tt><br />
+<tt>~a) Line two</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ol type="a"><li> Line one 
+</li><li> Line two</li></ol>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><strong>Ordered lists using uppercase Roman numerals</strong><br /><div class="floatl">
+<br />
+<tt>~I) Line one</tt><br />
+<tt>~I) Line two</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ol type="I"><li> Line one 
+</li><li> Line two</li></ol>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><strong>Ordered lists using lowercase Roman numerals</strong><br /><div class="floatl">
+<br />
+<tt>~i) Line one</tt><br />
+<tt>~i) Line two</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ol type="i"><li> Line one 
+</li><li> Line two </li></ol>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><h4>6. Inline comments</h4>
+<br />To format some text as an inline comment, use an indent (tilde, tab, or four spaces) followed by a <strong>&amp;</strong>.<br /> <br /><div class="floatl">
+
+<tt>~&amp; Comment</tt><br />
+<tt>~~&amp; Subcomment</tt><br />
+<tt>~~~&amp; Subsubcomment</tt><br />
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<ul class="thread"><li> Comment 
+<ul class="thread"><li> Subcomment 
+<ul class="thread"><li> Subsubcomment </li></ul></li></ul></li></ul>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /> <br /><h4>7. Images</h4>
+<br />To place images on a Wiki page, you can use the <tt>image</tt> action.<br /> <br />Image links can be external or internal Wiki links. You don't need to enter a link at all, and in that case just an image will be inserted. You can use the optional classes <tt>left</tt> and <tt>right</tt> to float images left and right. You don't need to use all those attributes, only <tt>url</tt> is required while <tt>alt</tt> is recommended for
+accessibility.<br /> <br /><div class="floatl">
+<br />
+<div class="indent"><tt>{{image class="center" alt="DVD logo" title="An image link" url="images/dvdvideo.gif" link="RecentChanges"}}</tt></div>
+<br /><br />
+<div class="indent"><a class="" href="./RecentChanges.html"><img class="center" width="100" height="97" src="images/dvdvideo.gif" alt="DVD logo" title="An image link" /></a></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /><h4>8. Links</h4>
+<br />To create a <strong> link to a wiki page </strong> you can use any of the
+following options:<br /> <br /><br />
+<ul><li> Type a <tt>WikiName</tt> (works only for page names with no whitespace): <br /> <br /> <tt>FormattingRules</tt> <br /> <a class="" href="./FormattingRules.html">FormattingRules</a> <br /> <br /></li></ul>
+<br /><br />
+<ul><li> Add a forced link surrounding the page name by <tt>[[</tt> and <tt>]]</tt> (everything after the | will be shown as description): <br /> <br /> <tt>[[SandBox|Test
+your formatting skills]]</tt> <br /> <a class="ext" href="http://SandBox|Test">your formatting skills</a> <br /> <br /> <tt>[[SandBox|&#27801;&#31665;]]</tt> <br /> <a class="ext" href="http://SandBox|&#27801;&#31665;">SandBox|&#27801;&#31665;</a> <br /> <br /></li></ul>
+<br /><br />
+<ul><li> Add an image with a link (see instructions above)</li></ul>
+<br /> <br />To <strong> link to external pages </strong>, you can do any of the following:<br /> <br /><br />
+<ul><li> Type a URL inside the page: <br /> <br /> <tt>http://blog.wikkawiki.org</tt> <br /> <a class="ext" href="http://blog.wikkawiki.org">http://blog.wikkawiki.org</a> <br /> <br /> </li></ul>
+<br /><br />
+<ul><li> Add a forced link surrounding the URL by <tt>[[</tt> and <tt>]]</tt> (everything after the | will be shown as description): <br /> <br /> <tt>[[http://docs.wikkawiki.org|Wikka documentation]]</tt> <br /> <a class="ext" href="http://docs.wikkawiki.org|Wikka">documentation</a> <br /> <br /> <tt>[[community@wikkawiki.org|Wikka community list]]</tt> <br /> <a class="mailto" href="mailto:community@wikkawiki.org|Wikka">community list</a> <br /> <br /></li></ul>
+<br /><br />
+<ul><li> Add an image with a link (see instructions above) </li></ul>
+<br /><br />
+<ul><li> Add an interwiki link (<a class="" href="./InterWiki.html">browse the list of available interwiki tags</a>): <br /> <br /> <tt>WikiPedia:WikkaWiki</tt> <br /> WikiPedia:WikkaWiki <br /> <br /> <tt>Google:CSS</tt> <br /> Google:CSS <br /> <br /> <tt>Thesaurus:Happy</tt> <br /> Thesaurus:Happy <br /> <br /></li></ul>
+<br /> <br /><h4>9. Tables</h4>
+<br /><div class="floatl">
+The <tt>table</tt> action has been deprecated as of Wikka version 1.2 and has been replaced with the syntax that follows. Please visit the documentation server for information about the older <tt>table</tt> action.
+</div>
+<div class="clear">&nbsp;</div>
+<br />Tables can be created using two pipe (<tt>||</tt>) symbols.  Everything in a single line is rendered as a table row.<br /> <br /><strong>Example:</strong><br /> <br />
+<tt>||Cell 1||Cell 2||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td>Cell 1</td><td>Cell 2</td></tr>
+</tbody>
+</table>
+<br /> <br />Header cells can be rendered by placing an equals sign between the pipes.<br /> <br /><strong>Example:</strong><br />
+<tt>|=|Header 1|=|Header 2||</tt><br />
+<tt>||Cell 1||Cell 2||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><th>Header 1</th><th>Header 2</th></tr>
+<tr><td>Cell 1</td><td>Cell 2</td></tr>
+</tbody>
+</table>
+<br /> <br />Row and column spans are specified with <tt>x:</tt> and <tt>y:</tt> in parentheses just after the pipes.<br /> <br /><strong>Example:</strong><br /> <br /><br />
+<tt>|=| |=|(x:2)Columns||</tt><br />
+<tt>|=|(y:2) Rows||Cell 1||Cell 2||</tt><br />
+<tt>||Cell 3||Cell 4||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><th> </th><th colspan="2">Columns</th></tr>
+<tr><th rowspan="2"> Rows</th><td>Cell 1</td><td>Cell 2</td></tr>
+<tr><td>Cell 3</td><td>Cell 4</td></tr>
+</tbody>
+</table>
+<br /> <br />Many additional features are available using table markup.  A more comprehensive table markup guide is available on this server's <a class="" href="./TableMarkup.html">TableMarkup</a> page. A complete syntax reference is available on this server's <a class="" href="./TableMarkupReference.html">TableMarkupReference</a> page.<br /> <br /><h4>10. Colored Text</h4>
+<br />Colored text can be created using the <tt>color</tt> action:<br /><div class="floatl">
+
+<div class="indent"><tt>{{color c="blue" text="This is a test"}}</tt><br />
+<span style="color: blue; ">This is a test</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br />You can also use hex values:<br /><div class="floatl">
+<br />
+<div class="indent"><tt>{{color hex="#DD0000" text="This is another test"}}</tt> <br />
+<span style="color: #dd0000; ">This is another test</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br />Alternatively, you can specify a foreground and background color using the <tt>fg</tt> and <tt>bg</tt> parameters (they accept both named and hex values):<br /><div class="floatl">
+<br />
+<div class="indent"><tt>{{color fg="#FF0000" bg="#000000" text="This is colored text on colored background"}}</tt><br />
+<span style="color: #ff0000; background-color: #000000; ">This is colored text on colored background</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>{{color fg="yellow" bg="black" text="This is colored text on colored background"}}</tt><br />
+<span style="color: yellow; background-color: black; ">This is colored text on colored background</span></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br /> <br /><h4>11. Floats</h4>
+<br />To create a <strong> left floated box </strong>, use two <tt>&lt;</tt> characters before and after the block.<br /> <br /><strong>Example:</strong><br /> <br />
+<div class="indent"><div class="indent"><tt>&lt;&lt; Some text in a left-floated box hanging around. &lt;&lt; Some more text as a filler. Some more text as a filler. Some more text as a filler.  Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler.</tt><br /> <br /><div class="floatl">
+ Some text in a left-floated box hanging around. 
+</div>
+ Some more text as a filler. Some more text as a filler. Some more text as a filler.  Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler.</div></div>
+<div class="clear">&nbsp;</div>
+<br />
+To create a <strong> right floated box </strong>, use two <tt>&gt;</tt> characters before and after the block.<br /> <br /><strong>Example:</strong><br /> <br /><br />
+<div class="indent"><tt>>> Some text in a right-floated box hanging around. >> Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler.</tt><br /> <br /><div class="floatr">
+ Some text in a right-floated box hanging around. 
+</div>
+ Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler. Some more text as a filler.</div>
+<div class="clear">&nbsp;</div>
+<br />
+<strong> Note: Use <tt>::c::</tt> to clear floated blocks. </strong><br /> <br /><h4>12. Code formatters</h4>
+<br />You can easily embed code blocks in a wiki page using a simple markup. Anything within a code block is displayed literally.  To create a <strong> generic code block </strong> you can use the following markup:<br /> <br />
+<div class="indent"><tt>%% This is a code block %%</tt>. </div>
+<br />
+<div class="code">
+<pre> This is a code block </pre></div>
+<form action="./FormattingRules.html/grabcode" method="post" id="form_61092f4ded">
+<fieldset class="hidden">
+	<input type="hidden" name="f4fca8ffb39" value="081fd58a151d51908b50bb8c259078eb" />
+	<input type="hidden" name="form_id" value="61092f4ded" />
+</fieldset>
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="+This+is+a+code+block+" /></form>
+<br />
+<br />To create a <strong> code block with syntax highlighting </strong>, you need to specify a <em> code formatter </em> (see below for a list of available code formatters).<br /> <br /><br />
+<div class="indent"><tt>%%(<span style="color: red; ">php</span>)<br />&lt;?php<br />echo "Hello, World!";<br />?&gt;<br />%%</tt></div>
+<br /><br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">&lt;?php</span><br />
+<a href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="st0">&quot;Hello, World!&quot;</span>;<br />
+<span class="kw2">?&gt;</span></div>
+<!--end GeSHi-->
+<form action="./FormattingRules.html/grabcode" method="post" id="form_61092f4ded_1">
+<fieldset class="hidden">
+	<input type="hidden" name="f39272dc368" value="7e98d6dadd107ec0d8d7b47284d9f843" />
+	<input type="hidden" name="form_id" value="61092f4ded" />
+</fieldset>
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="%3C%3Fphp%0Aecho+%22Hello%2C+World%21%22%3B%0A%3F%3E" /></form>
+<br />
+<br /> <br />You can also specify an optional <em> starting line </em> number.<br /><br />
+<div class="indent"><tt>%%(php;<span style="color: red; ">15</span>)<br />&lt;?php<br />echo "Hello, World!";<br />?&gt;<br />%%</tt></div>
+<br /><br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><ol start="15"><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li>
+<li class="li1"><div class="de1"><a href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="st0">&quot;Hello, World!&quot;</span>;</div></li>
+<li class="li1"><div class="de1"><span class="kw2">?&gt;</span></div></li></ol></div>
+<!--end GeSHi-->
+<form action="./FormattingRules.html/grabcode" method="post" id="form_61092f4ded_2">
+<fieldset class="hidden">
+	<input type="hidden" name="fb5397625a0" value="530c628da5a3948bb6ee3004b8105624" />
+	<input type="hidden" name="form_id" value="61092f4ded" />
+</fieldset>
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="%3C%3Fphp%0Aecho+%22Hello%2C+World%21%22%3B%0A%3F%3E" /></form>
+<br />
+<br /> <br />If you specify a <em> filename </em>, this will be used for downloading the code.<br /><br />
+<div class="indent"><tt>%%(php;15;<span style="color: red; ">test.php</span>)<br />&lt;?php<br />echo "Hello, World!";<br />?&gt;<br />%%</tt></div>
+<br /><br />
+<div class="code_header">test.php (line 15)</div>
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><ol start="15"><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li>
+<li class="li1"><div class="de1"><a href="http://www.php.net/echo"><span class="kw3">echo</span></a> <span class="st0">&quot;Hello, World!&quot;</span>;</div></li>
+<li class="li1"><div class="de1"><span class="kw2">?&gt;</span></div></li></ol></div>
+<!--end GeSHi-->
+<form action="./FormattingRules.html/grabcode" method="post" id="form_61092f4ded_3">
+<fieldset class="hidden">
+	<input type="hidden" name="f55aa565471" value="204f853b9bdd96dba7608d1d967db729" />
+	<input type="hidden" name="form_id" value="61092f4ded" />
+</fieldset>
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download test.php" /><input type="hidden" name="filename" value="test.php" /><input type="hidden" name="code" value="%3C%3Fphp%0Aecho+%22Hello%2C+World%21%22%3B%0A%3F%3E" /></form>
+<br />
+<br /> <br /><br />
+<table class="data">
+<caption>List of available code formatters</caption>
+<tbody>
+<tr><th>Language</th><th>Formatter</th><th>Language</th><th>Formatter</th><th>Language</th><th>Formatter</th></tr>
+</tbody>
+<tbody>
+<tr><th>Actionscript</th><td><tt>actionscript</tt></td><th>ABAP</th><td><tt>abap</tt></td><th>ADA</th><td><tt>ada</tt></td></tr>
+<tr><th>Apache Log</th><td><tt>apache</tt></td><th>AppleScript</th><td><tt>applescript</tt></td><th>ASM</th><td><tt>asm</tt></td></tr>
+<tr><th>ASP</th><td><tt>asp</tt></td><th>AutoIT</th><td><tt>autoit</tt></td><th>Bash</th><td><tt>bash</tt></td></tr>
+<tr><th>BlitzBasic</th><td><tt>blitzbasic</tt></td><th>Basic4GL</th><td><tt>basic4gl</tt></td><th>bnf</th><td><tt>bnf</tt></td></tr>
+<tr><th>C</th><td><tt>c</tt></td><th>C for Macs</th><td><tt>c_mac</tt></td><th>C#</th><td><tt>csharp</tt></td></tr>
+<tr><th>C++</th><td><tt>cpp</tt></td><th>C++ (+QT)</th><td><tt>cpp-qt</tt></td><th>CAD DCL</th><td><tt>caddcl</tt></td></tr>
+<tr><th>CadLisp</th><td><tt>cadlisp</tt></td><th>CFDG</th><td><tt>cfdg</tt></td><th>ColdFusion</th><td><tt>cfm</tt></td></tr>
+<tr><th>CSS</th><td><tt>css</tt></td><th>D</th><td><tt>d</tt></td><th>Delphi</th><td><tt>delphi</tt></td></tr>
+<tr><th>Diff-Output</th><td><tt>diff</tt></td><th>DIV</th><td><tt>div</tt></td><th>DOS</th><td><tt>dos</tt></td></tr>
+<tr><th>Dot</th><td><tt>dot</tt></td><th>Eiffel</th><td><tt>eiffel</tt></td><th>Fortran</th><td><tt>fortran</tt></td></tr>
+<tr><th>FreeBasic</th><td><tt>freebasic</tt></td><th>FOURJ's Genero 4GL</th><td><tt>genero</tt></td><th>GML</th><td><tt>gml</tt></td></tr>
+<tr><th>Groovy</th><td><tt>groovy</tt></td><th>Haskell</th><td><tt>haskell</tt></td><th>HTML</th><td><tt>html4strict</tt></td></tr>
+<tr><th>INI</th><td><tt>ini</tt></td><th>Inno Script</th><td><tt>inno</tt></td><th>Io</th><td><tt>io</tt></td></tr>
+<tr><th>Java 5</th><td><tt>java5</tt></td><th>Java</th><td><tt>java</tt></td><th>Javascript</th><td><tt>javascript</tt></td></tr>
+<tr><th>LaTeX</th><td><tt>latex</tt></td><th>Lisp</th><td><tt>lisp</tt></td><th>Lua</th><td><tt>lua</tt></td></tr>
+<tr><th>Matlab</th><td><tt>matlab</tt></td><th>mIRC Scripting</th><td><tt>mirc</tt></td><th>Microchip Assembler</th><td><tt>mpasm</tt></td></tr>
+<tr><th>Microsoft Registry</th><td><tt>reg</tt></td><th>Motorola 68k Assembler</th><td><tt>m68k</tt></td><th>MySQL</th><td><tt>mysql</tt></td></tr>
+<tr><th>NSIS</th><td><tt>nsis</tt></td><th>Objective C</th><td><tt>objc</tt></td><th>OpenOffice BASIC</th><td><tt>oobas</tt></td></tr>
+<tr><th>Objective Caml</th><td><tt>ocaml</tt></td><th>Objective Caml (brief)</th><td><tt>ocaml-brief</tt></td><th>Oracle 8</th><td><tt>oracle8</tt></td></tr>
+<tr><th>Pascal</th><td><tt>pascal</tt></td><th>Per (FOURJ's Genero 4GL)</th><td><tt>per</tt></td><th>Perl</th><td><tt>perl</tt></td></tr>
+<tr><th>PHP</th><td><tt>php</tt></td><th>PHP (brief)</th><td><tt>php-brief</tt></td><th>PL/SQL</th><td><tt>plsql</tt></td></tr>
+<tr><th>Python</th><td><tt>phyton</tt></td><th>Q(uick)BASIC</th><td><tt>qbasic</tt></td><th>robots.txt</th><td><tt>robots</tt></td></tr>
+<tr><th>Ruby on Rails</th><td><tt>rails</tt></td><th>Ruby</th><td><tt>ruby</tt></td><th>SAS</th><td><tt>sas</tt></td></tr>
+<tr><th>Scheme</th><td><tt>scheme</tt></td><th>sdlBasic</th><td><tt>sdlbasic</tt></td><th>Smarty</th><td><tt>smarty</tt></td></tr>
+<tr><th>SQL</th><td><tt>sql</tt></td><th>TCL/iTCL</th><td><tt>tcl</tt></td><th>T-SQL</th><td><tt>tsql</tt></td></tr>
+<tr><th>Text</th><td><tt>text</tt></td><th>thinBasic</th><td><tt>thinbasic</tt></td><th>Unoidl</th><td><tt>idl</tt></td></tr>
+<tr><th>VB.NET</th><td><tt>vbnet</tt></td><th>VHDL</th><td><tt>vhdl</tt></td><th>Visual BASIC</th><td><tt>vb</tt></td></tr>
+<tr><th>Visual Fox Pro</th><td><tt>visualfoxpro</tt></td><th>WinBatch</th><td><tt>winbatch</tt></td><th>XML</th><td><tt>xml</tt></td></tr>
+<tr><th>X++</th><td><tt>xpp</tt></td><th>ZiLOG Z80 Assembler</th><td><tt>z80</tt></td><th> </th></tr>
+</tbody>
+</table>
+<br /> <br /><h4>13. Mindmaps</h4>
+<br />Wikka has native support for Wikka:FreeMind|mindmaps.  There are two options for embedding a mindmap in a wiki page.<br /> <br /> <strong>Option 1:</strong> Upload a FreeMind file to a webserver, and then place a link to it on a wikka page: <tt>http://yourdomain.com/freemind/freemind.mm</tt> No special formatting is necessary.  <br /> <br /><strong>Option 2:</strong> Paste the FreeMind data directly into a wikka page:
+<br />
+<ul><li>Open a FreeMind file with a text editor.
+</li><li>Select all, and copy the data.
+</li><li>Browse to your Wikka site and paste the Freemind data into a page.</li></ul>
+<div class="clear">&nbsp;</div>
+<br />
+<br /><h4>14. Embedded HTML</h4>
+<br />You can easily paste HTML in a wiki page by wrapping it into two sets of doublequotes.<br /> <br />
+<div class="indent"><tt>&quot;&quot;[html code]&quot;&quot;</tt></div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>&quot;&quot;y = x&lt;sup&gt;n+1&lt;/sup&gt;&quot;&quot;</tt><br />
+y = x<sup>n+1</sup></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<div class="floatl">
+<br />
+<div class="indent"><tt>&quot;&quot;&lt;acronym title="Cascade Style Sheet"&gt;CSS&lt;/acronym&gt;&quot;&quot;</tt><br />
+<acronym title="Cascade Style Sheet">CSS</acronym></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<br />By default, some HTML tags are removed by the SafeHTML parser to protect against potentially dangerous code.  The list of tags that are stripped can be found on the Wikka:SafeHTML page.<br /> <br />It is possible to allow <em> all </em> HTML tags to be used, see Wikka:UsingHTML for more information.<br /> <br /> <hr />
+<a class="" href="./CategoryWiki.html">CategoryWiki</a>
+<div style="clear: both"></div>
+</div>
+<!-- END PAGE CONTENT -->
+<!-- BEGIN COMMENT BLOCK -->
+<div id="comments">
+<div id="commentheader">
+Comments [<a href="./FormattingRules.html&amp;show_comments=0">Hide comments/form</a>]
+</div>
+<div id="commentform">
+</div>
+</div>
+<!-- END COMMENT BLOCK -->
+<table align="right"><tr>
+<td align='left' ><a href='http://www.randl.com/shop/catalog/product_info.php?products_id=70829'>R and L Electronics has a TS990S</a><br>KENWOOD TS990S, TS-990S , HF/6m 200W ALL-MODE<br><a href='http://www.kenwoodusa.com/Communications/Amateur_Radio/HF_Base_Mobile/TS-990S'>RandL has link to Manufacturer info on the TS990S here.</a><br><a href='http://www.eham.net/reviews/detail/10981'>R&L has a link to the Eham review on the TS990S here.</a></td></tr></table>
+<!-- BEGIN PAGE FOOTER -->
+<div id="footer">
+<ul id="options_menu">
+<li><a href="./FormattingRules.html/showcode" title="Display the markup for this page">[Source]</a>
+</li>
+<li><a href="./FormattingRules.html/history" title="Click to view recent edits to this page">[History]</a>
+
+</li>
+<li><a class="datetime" href="./FormattingRules.html/revisions" title="Click to view recent revisions list for this page">2015-03-12 07:23:07</a> <a href="./FormattingRules.html/revisions.xml" title="Click to display a feed with the latest revisions to this page"><img src="images/feed.png" class="icon" width="14" height="14" alt="feed icon" /></a>
+</li>
+<li>Owner: <a class="missingpage" href="./ChepeNolon.html/edit" title="Create this page">ChepeNolon</a>
+
+</li>
+</ul>
+</div>
+<!-- END PAGE FOOTER -->
+<!-- BEGIN SYSTEM INFO -->
+<div id="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">WikkaWiki </a>
+
+</div>
+<!-- END SYSTEM INFO -->
+<!--Page was generated in 3.6152 seconds-->
+</div>
+<!-- END PAGE WRAPPER -->
+
+</body>
+</html>

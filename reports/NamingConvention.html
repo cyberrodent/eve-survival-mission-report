@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EVE-Survival: Naming Convention
+</title>
+	<base href="./" />
+	<meta name="generator" content="WikkaWiki" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="Eve missions, R and L Electronics" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/wikka.css?a8278" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/print.css" media="print" />
+	<link rel="icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: revisions for NamingConvention (RSS)" href="./NamingConvention.html/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: recently edited pages (RSS)" href="./NamingConvention.html/recentchanges.xml" />
+</head>
+<body>
+<!-- BEGIN PAGE WRAPPER -->
+<div id="page">
+<!-- BEGIN PAGE HEADER -->
+<div id="header">
+<h2><a id="homepage_link" href="./HomePage.html">EVE-Survival</a> : <a href="./NamingConvention.html/backlinks" title="Display a list of pages linking to NamingConvention">NamingConvention</a></h2>
+<ul id="main_menu">
+<li><a class="" href="./MissionReports.html">MissionReports</a>
+</li>
+<li><a class="" href="./PageIndex.html">PageIndex</a>
+</li>
+<li><a class="" href="./RecentChanges.html">RecentChanges</a>
+</li>
+<li><a class="" href="./RecentlyCommented.html">RecentlyCommented</a>
+</li>
+<li><a class="" href="./UserSettings.html">Login/Register</a>
+</li>
+<li><form action="./TextSearch.html" id="form_c2b696fff2">
+<label for="searchbox">Search: </label><input id="searchbox" name="phrase" size="15" class="searchbox" /><input name="wakka" type="hidden" value="TextSearch" /></form>
+
+</li>
+<li>Your hostname is <tt>207.237.82.100</tt>
+</li>
+</ul>
+</div>
+<!-- END PAGE HEADER -->
+<!-- BEGIN PAGE CONTENT -->
+<div id="content">
+<h4>Naming Convention</h4>
+
+<br />
+Since this Wiki is using words with at least two capital letters to name link/pages (like <a class="" href="./ChepeNolon.html">ChepeNolon</a>), we've got to keep a strict policy on how we name the documents.<br />
+<br />
+Names will be split into four sections. Name, level, a faction list, and part. Only the first two are mandatory.<br />
+<br />
+Syntax:<br />
+[NameOfTheMission][Level][FactionList][Part]<br />
+<br />
+Examples:<br />
+<ul><li> Worlds Collide Level 4 angels and sansha: WorldsCollide4ansa
+</li><li> A Better World Level 3: BetterWorld3</li></ul>
+<br />
+<h4>Mission Page Names</h4>
+
+Currently mission pages have inconsistent capitalisation of their names. Instead of using lower case for articles, coordinate conjunctions and prepositions <strong>always capitalise each word</strong>. This allows the names to be processed programmatically. Besides, few people understand the grammar of capitalising titles properly.<br />
+<br />
+If the name of the mission begins with either 'A', or 'The', the word is omitted.<br />
+<br />
+Examples:<br />
+<ul><li> Worlds Collide becomes: WorldsCollide
+</li><li> A Better World becomes: BetterWorld
+</li><li> Like Drones to a Cloud becomes: LikeDronesToACloud</li></ul>
+<br />
+<h4>Level</h4>
+
+A single digit from 1 to 5.<br />
+<br />
+<h4>Faction List</h4>
+
+A codified list of factions involved in the mission. Faction codes are always two letters long, and are defined below. Rogue drones are not a faction.<br />
+<br />
+Example:<br />
+<ul><li> Angels and Sansha Nation: ansa</li></ul>
+<br />
+Faction Codes:<br />
+<ul><li> am: Amarr Empire
+</li><li> an: Angel Cartel
+</li><li> at: Ammatar Mandate
+</li><li> br: The Blood Raider Covenant
+</li><li> ca: Caldari State
+</li><li> cc: DED
+</li><li> ga: Gallente Federation
+</li><li> gu: Guristas Pirates
+</li><li> ib: The InterBus
+</li><li> jo: Jove Empire
+</li><li> kk: Khanid Kingdom
+</li><li> mi: Minmatar Republic
+</li><li> mo: Mordu's Legion Command
+</li><li> or: ORE (Outer Ring Excavations)
+</li><li> sa: Sansha's Nation
+</li><li> se: Serpentis
+</li><li> so: The Society
+</li><li> ss: The Servant Sisters of EVE
+</li><li> sy: The Syndicate
+</li><li> tk: Thukker tribe</li></ul>
+<br />
+<h4>Part</h4>
+
+If a mission has multiple parts which are detailed across more than one page then append the name with the letter 'p' followed by the number of the part.<br />
+<br />
+Examples: EnemiesAbound4p1, EnemiesAbound4p3<br />
+<br />
+<h3>Linking from the index page</h3>
+
+By using the forced link, you can display custom text for the link: [[BetterWorld3 Level 3]] will show this: <a class="" href="./BetterWorld3.html">Level 3</a><br />
+<br />
+So a complete line will be like this:<br />
+<br />
+Worlds Collide (Angel / Sansha) [[WorldsCollide3ansa Level 3]] [[WorldsCollide4ansa Level 4]]<br />
+Better World, A [[BetterWorld3 Level 3]]<br />
+<br />
+Displaying:<br />
+<br />
+Worlds Collide (Angel / Sansha) <a class="missingpage" href="./WorldsCollide3ansa.html/edit" title="Create this page">Level 3</a> <a class="" href="./WorldsCollide4ansa.html">Level 4</a><br />
+Better World, A <a class="" href="./BetterWorld3.html">Level 3</a><br />
+<br />
+Note: The 'a' and 'the' are placed last in the mission name. This is for easy sorting on the index page.
+<div style="clear: both"></div>
+</div>
+<!-- END PAGE CONTENT -->
+<!-- BEGIN COMMENT BLOCK -->
+<div id="comments">
+<div id="commentheader">
+Comments [<a href="./NamingConvention.html&amp;show_comments=0">Hide comments/form</a>]
+</div>
+<div id="commentlist">
+<div class="comment">
+<span id="comment_2584"></span>Level 5 mission pages that need renaming:<br />
+<br />
+WildcatStrike4drones -&gt; WildcatStrike4<br />
+BreedingFacility5 -&gt; BreedingFacility5am<br />
+CaldariBeacons5 -&gt; CaldariBeacons5ca<br />
+DestroyAmmatarBase5 -&gt; DestroyTheAmmatarBase5at<br />
+DestroytheCaldariOutpost5 -&gt; DestroyTheCaldariOutpost5ca
+	<div class="commentinfo">
+-- <a class="" href="./SharriAtal.html">SharriAtal</a>
+ (2009-06-26 13:28:02)
+
+	</div>
+</div>
+<div class="comment">
+<span id="comment_2585"></span>Level 4 mission pages that need renaming. Many had missing faction codes:<br />
+<br />
+AmarrExcavators4 -&gt; AmarrExcavators4am<br />
+AmbushtheConvoy4 -&gt; AmbushTheConvoy4se<br />
+AngelCartelSpies4 -&gt; AngelCartelSpies4an<br />
+AngelExtragavanza4 -&gt; AngelExtragavanza4an<br />
+AttackoftheDrones4 -&gt; AttackOfTheDrones4<br />
+BloodRaiderSpies4 -&gt; BloodRaiderSpies4br<br />
+CaseofKidnapping4 -&gt; CaseOfKidnapping4<br />
+CoveringyourTracks4 -&gt; CoveringYourTracks4<br />
+DesperateManeuvers4 -&gt; DesperateManeuvers4brguse<br />
+DiplomaticIncident4 -&gt; DiplomaticIncident4am<br />
+DuoofDeath4an -&gt; DuoOfDeath4an<br />
+DuoofDeath4br -&gt; DuoOfDeath4br<br />
+DuoofDeath4gu -&gt; DuoOfDeath4gu<br />
+DuoofDeath4sa -&gt; DuoOfDeath4sa<br />
+DuoofDeath4se -&gt; DuoOfDeath4se<br />
+EnemiesAbound4p1 -&gt; EnemiesAbound4gap1<br />
+EnemiesAbound4p3 -&gt; EnemiesAbound4gap3<br />
+EnemiesAbound4p4 -&gt; EnemiesAbound4gap4<br />
+EnemiesAbound4p5 -&gt; EnemiesAbound4mip5<br />
+ExtractTheRenegade4 -&gt; ExtractTheRenegade4ga<br />
+FederalConfidence4 -&gt; FederalConfidence4ca<br />
+FeedingtheGiant4 -&gt; FeedingTheGiant4<br />
+GuristaExtravaganza4 -&gt; GuristaExtravaganza4gu<br />
+GuristaSpies4 -&gt; GuristaSpies4gu<br />
+IllegalActivity4 -&gt; IllegalActivity4ga<br />
+InsorumHijacking4storyline -&gt; InsorumHijacking4<br />
+IntercepttheSaboteurs4am -&gt; InterceptTheSaboteurs4am<br />
+IntercepttheSaboteurs4br -&gt; InterceptTheSaboteurs4br<br />
+IntercepttheSaboteurs4gu -&gt; InterceptTheSaboteurs4gu<br />
+IntercepttheSaboteurs4mi -&gt; InterceptTheSaboteurs4mi<br />
+IntercepttheSaboteurs4sesa -&gt; InterceptTheSaboteurs4sesa<br />
+IntheMidstofDeadspace4p1 -&gt; InTheMidstOfDeadspace4amcap1<br />
+IntheMidstofDeadspace4p3 -&gt; InTheMidstOfDeadspace4amp3<br />
+IntheMidstofDeadspace4p4 -&gt; InTheMidstOfDeadspace4amp4<br />
+IntheMidstofDeadspace4p5 -&gt; InTheMidstOfDeadspace4amcap5<br />
+KhanidNobleman4 -&gt; KhanidNobleman4am<br />
+LikeDronestoaCloud4 -&gt; LikeDronesToACloud4<br />
+MordusFolly4Mordus -&gt; MordusFolly4<br />
+NotGneissatAll4 -&gt; NotGneissAtAll4<br />
+PotandKettle4 -&gt; PotAndKettle4am<br />
+Recon4 -&gt; Split into Recon4p2 &amp; Recon4p3<br />
+Recon4an -&gt; Recon4anp1<br />
+Recon4br -&gt; Recon4brp1<br />
+Recon4gu -&gt; Recon4gup1<br />
+Recon4sa -&gt; Recon4sap1<br />
+Recon4se -&gt; Recon4sep1<br />
+RitualistRaid4 -&gt; RitualistRaid4br<br />
+RogueSlaveTrader4 -&gt; RogueSlaveTrader4sa<br />
+SanshaSpies4 -&gt; SanshaSpies4sa<br />
+SerpentisExtravaganza4 -&gt; SerpentisExtravaganza4se<br />
+SerpentisShipBuilders4 -&gt; SerpentisShipBuilders4se<br />
+SerpentisSpies4 -&gt; SerpentisSpies4se<br />
+SmashSupplier4am -&gt; SmashTheSupplier4am<br />
+StoptheThief4 -&gt; StopTheThief<br />
+WildcatStrike4drones -&gt; WildcatStrike4
+	<div class="commentinfo">
+-- <a class="" href="./SharriAtal.html">SharriAtal</a>
+ (2009-06-26 13:30:37)
+
+	</div>
+</div>
+<div class="comment">
+<span id="comment_2586"></span>Level 3 mission pages that need renaming. Many had mission faction codes.<br />
+<br />
+AgainsttheEmpire3am -&gt; AgainstTheEmpire3am<br />
+AmarrianTyrants3 -&gt; AmarrianTyrants3am<br />
+AngelCartelSpies3 -&gt; AngelCartelSpies3an<br />
+AngelExtragavanza3 -&gt; AngelExtragavanza3an<br />
+AngelStrike3 -&gt; AngelStrike3p1<br />
+AngelStrike3br -&gt; AngelStrike3brp5<br />
+AngelStrike3gu -&gt; AngelStrike3gup5<br />
+AngelStrike3sa -&gt; AngelStrike3sap5<br />
+BloodRaiderSpies3 -&gt; BloodRaiderSpies3br<br />
+CrookedCop3 -&gt; CrookedCop3se<br />
+DamselinDistress3 -&gt; DamselInDistress3<br />
+DrivingaWedge3 -&gt; DrivingaWedge3gami<br />
+DuoofDeath3an -&gt; DuoOfDeath3an<br />
+DuoofDeath3br -&gt; DuoOfDeath3br<br />
+DuoofDeath3gu -&gt; DuoOfDeath3gu<br />
+DuoofDeath3sa -&gt; DuoOfDeath3sa<br />
+DuoofDeath3se -&gt; DuoOfDeath3se<br />
+EliminatethePirateCampers3an -&gt; EliminateThePirateCampers3an<br />
+EliminatethePirateCampers3br -&gt; EliminateThePirateCampers3br<br />
+FallingNationComesCost3 -&gt; FallingNationComesCost3sa<br />
+FederalInspection3 -&gt; FederalInspection3se<br />
+ForcetobeReckonedWith3an -&gt; ForceToBeReckonedWith3an<br />
+ForcetobeReckonedWith3br -&gt; ForceToBeReckonedWith3br<br />
+ForcetobeReckonedWith3se -&gt; ForceToBeReckonedWith3se<br />
+GuristaExtravaganza3 -&gt; GuristaExtravaganza3gu<br />
+GuristaSpies3 -&gt; GuristaSpies3gu<br />
+GuristasStrike3 -&gt; GuristasStrike3p1<br />
+GuristasStrike3se -&gt; GuristasStrike3sep5<br />
+IllegalActivity3 -&gt; IllegalActivity3ga<br />
+InterceptthePirateSmugglers3br -&gt; InterceptThePirateSmugglers3br<br />
+InterceptthePirateSmugglers3se -&gt; InterceptThePirateSmugglers3se<br />
+IntercepttheSaboteurs3am -&gt; InterceptTheSaboteurs3am<br />
+IntercepttheSaboteurs3sase -&gt; InterceptTheSaboteurs3sase<br />
+KidnappersStrike3 -&gt; KidnappersStrike3p1<br />
+KidnappersStrike3br -&gt; KidnappersStrike3brp5<br />
+KidnappersStrike3gu -&gt; KidnappersStrike3gup5<br />
+KidnappersStrike3sa -&gt; KidnappersStrike3sap5<br />
+MissingReporters3 -&gt; MissingReporters3amca<br />
+PirateRadio3 -&gt; PirateRadio3mi<br />
+PoliceInvasion3kk -&gt; PoliceInvasion3am<br />
+PortaltoWar3 -&gt; PortalToWar3amca<br />
+Retribution3Ca -&gt; Retribution3ca<br />
+RevengeIsSweet3 -&gt; RevengeIsSweet3se<br />
+RogueSlaveTrader3 -&gt; RogueSlaveTrader3br<br />
+SanshaSpies3 -&gt; SanshaSpies3sa<br />
+SeekandDestroy3an -&gt; SeekAndDestroy3an<br />
+SeekandDestroy3br -&gt; SeekAndDestroy3br<br />
+SeekandDestroy3gu -&gt; SeekAndDestroy3gu<br />
+SeekandDestroy3sa -&gt; SeekAndDestroy3sa<br />
+SeekandDestroy3se -&gt; SeekAndDestroy3se<br />
+SerpentisExtravaganza3 -&gt; SerpentisExtravaganza3se<br />
+SerpentisSpies3 -&gt; SerpentisSpies3se<br />
+SilenceDeepasDeath3an -&gt; SilenceDeepAsDeath3an<br />
+SilencetheInformant3 -&gt; SilenceTheInformant3<br />
+SlaveMustBeReturned3 -&gt; SlaveMustBeReturned3mi<br />
+SmallArmory3 -&gt; SmallArmory3an<br />
+SpaceTelescope3 -&gt; SpaceTelescope3gu<br />
+StoptheThief3 -&gt; StopTheThief3<br />
+SuccessComesataPrice3 -&gt; SuccessComesAtAPrice3gu<br />
+TechnologicalSecrets3 -&gt; TechnologicalSecrets3mi<br />
+Uprising3mo -&gt; Uprising3
+	<div class="commentinfo">
+-- <a class="" href="./SharriAtal.html">SharriAtal</a>
+ (2009-06-26 14:32:46)
+
+	</div>
+</div>
+<div class="comment">
+<span id="comment_7224"></span>This page's instructions are self contratictory. It needs to be rewritten so new users (like me) can figure out how to add new missions without taking hours guessing at what these instructions mean.
+	<div class="commentinfo">
+-- <a class="missingpage" href="./JamesF.html/edit" title="Create this page">JamesF</a>
+ (2012-09-04 22:59:05)
+
+	</div>
+</div>
+</div>
+<div id="commentform">
+</div>
+</div>
+<!-- END COMMENT BLOCK -->
+<table align="right"><tr>
+<td align='left' ><a href='http://www.randl.com/shop/catalog/product_info.php?products_id=70828'>R and L Electronics has a SP990</a><br>KENWOOD SP990, SP-990 , EXTERNAL SPEAKER with AUDIO FILTERS for TS-990S<br></td></tr></table>
+<!-- BEGIN PAGE FOOTER -->
+<div id="footer">
+<ul id="options_menu">
+<li><a href="./NamingConvention.html/showcode" title="Display the markup for this page">[Source]</a>
+</li>
+<li><a href="./NamingConvention.html/history" title="Click to view recent edits to this page">[History]</a>
+
+</li>
+<li><a class="datetime" href="./NamingConvention.html/revisions" title="Click to view recent revisions list for this page">2009-07-04 06:24:45</a> <a href="./NamingConvention.html/revisions.xml" title="Click to display a feed with the latest revisions to this page"><img src="images/feed.png" class="icon" width="14" height="14" alt="feed icon" /></a>
+</li>
+<li>Owner: <a class="missingpage" href="./ChepeNolon.html/edit" title="Create this page">ChepeNolon</a>
+
+</li>
+</ul>
+</div>
+<!-- END PAGE FOOTER -->
+<!-- BEGIN SYSTEM INFO -->
+<div id="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">WikkaWiki </a>
+
+</div>
+<!-- END SYSTEM INFO -->
+<!--Page was generated in 3.3512 seconds-->
+</div>
+<!-- END PAGE WRAPPER -->
+
+</body>
+</html>

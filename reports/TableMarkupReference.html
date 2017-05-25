@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EVE-Survival: Wikka Table Markup Reference
+</title>
+	<base href="./" />
+	<meta name="generator" content="WikkaWiki" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="Eve missions, R and L Electronics" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/wikka.css?a8278" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/print.css" media="print" />
+	<link rel="icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: revisions for TableMarkupReference (RSS)" href="./TableMarkupReference.html/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: recently edited pages (RSS)" href="./TableMarkupReference.html/recentchanges.xml" />
+</head>
+<body>
+<!-- BEGIN PAGE WRAPPER -->
+<div id="page">
+<!-- BEGIN PAGE HEADER -->
+<div id="header">
+<h2><a id="homepage_link" href="./HomePage.html">EVE-Survival</a> : <a href="./TableMarkupReference.html/backlinks" title="Display a list of pages linking to TableMarkupReference">TableMarkupReference</a></h2>
+<ul id="main_menu">
+<li><a class="" href="./MissionReports.html">MissionReports</a>
+</li>
+<li><a class="" href="./PageIndex.html">PageIndex</a>
+</li>
+<li><a class="" href="./RecentChanges.html">RecentChanges</a>
+</li>
+<li><a class="" href="./RecentlyCommented.html">RecentlyCommented</a>
+</li>
+<li><a class="" href="./UserSettings.html">Login/Register</a>
+</li>
+<li><form action="./TextSearch.html" id="form_c2b696fff2">
+<label for="searchbox">Search: </label><input id="searchbox" name="phrase" size="15" class="searchbox" /><input name="wakka" type="hidden" value="TextSearch" /></form>
+
+</li>
+<li>Your hostname is <tt>207.237.82.100</tt>
+</li>
+</ul>
+</div>
+<!-- END PAGE HEADER -->
+<!-- BEGIN PAGE CONTENT -->
+<div id="content">
+<h1>Wikka Table Markup Reference</h1>
+
+<div class="floatr">
+<h5>See also:</h5>
+
+<ul><li>For an informal introduction to this markup and several examples consult this server's <a class="" href="./TableMarkup.html">TableMarkup</a> page.
+</li><li>Updated versions of this page can be found on the documentation server.</li></ul>
+
+</div>
+<br />
+<h3> 1. Table Markup Scheme </h3>
+
+<br />
+The generic markup for table elements follows this scheme:<br />
+<br />
+<div class="indent"><strong><tt><span style="color: #f00; ">|*|</span><span style="color: blue; ">(attribute parameters)</span><span style="color: green; ">{style parameters}</span>content<span style="color: #f00; ">||</span></tt></strong></div>
+<br />
+<h5>Example:</h5>
+
+<br />
+<div class="indent"><tt>|=|(i:main_heading){text-size: 120%}This is the main heading||</tt></div>
+<br />
+<h4>Understanding the Table Markup Scheme</h4>
+
+<br />
+<ol type="1"><li><strong>Opening delimiter</strong> <br /> <strong><tt><span style="color: #f00; ">|*|</span></tt></strong> is any of the delimiters described in the <em>elements table</em> below.
+</li><li><strong>Attributes</strong> <br /> <strong><tt><span style="color: blue; ">(attribute parameters)</span></tt></strong> is an optional series of <tt>parameter:value</tt> declarations enclosed in brackets. Valid parameters are described in the <em>attribute table</em> below. Multiple parameter declarations can be separated with a semicolon (<strong><tt>;</tt></strong>).
+</li><li><strong>Style</strong> <br /> <strong><tt><span style="color: green; ">{style parameters}</span></tt></strong> is an optional series of CSS style declarations enclosed in braces. Multiple style declarations can be separated with a semicolon (<strong><tt>;</tt></strong>).
+</li><li><strong>Content</strong> <br /> <strong><tt>content</tt></strong> can be any valid content for that element (including text).
+</li><li><strong>Closing delimiter</strong> <br /> <strong><tt><span style="color: #f00; ">||</span></tt></strong> is the standard delimiter.</li></ol>
+<br />
+<h5>Note:</h5>
+
+Some elements are <em>self closing</em> and do not accept any attributes, style parameters or content. See the notes in the <em>elements table</em> below.<br />
+<br />
+<h3> 2. Elements </h3>
+
+<br />
+<table class="data" style="width: 80%">
+<caption>Table Elements</caption>
+<tbody>
+<tr><th>XHTML Elements</th><th>Delimiter</th><th>Notes</th></tr>
+<tr><td><tt>&lt;table&gt;</tt></td><td><tt>|!|</tt></td><td>Optional, only useful for adding attributes. <strong>Must</strong> be first in table markup if used. Should be on a line by itself.</td></tr>
+<tr><td><tt>&lt;caption&gt;</tt></td><td><tt>|?|</tt></td><td></td></tr>
+<tr><td><tt>&lt;colgroup&gt;</tt></td><td><tt>|_|</tt></td><td></td></tr>
+<tr><td><tt>&lt;col /&gt;</tt></td><td><tt>|-|</tt></td><td>Selfclosing - must not be closed!</td></tr>
+<tr><td><tt>&lt;thead&gt;</tt></td><td><tt>|[|</tt></td><td></td></tr>
+<tr><td><tt>&lt;tfoot&gt;</tt></td><td><tt>|]|</tt></td><td></td></tr>
+<tr><td><tt>&lt;tbody&gt;</tt></td><td><tt>|#|</tt></td><td></td></tr>
+<tr><td><tt>&lt;tr&gt;</tt></td><td>none</td><td>Will be opened for each row of table cells.</td></tr>
+<tr><td><tt>&lt;th&gt;</tt></td><td><tt>|=|</tt></td><td></td></tr>
+<tr><td><tt>&lt;td&gt;</tt></td><td><tt>||</tt></td><td></td></tr>
+</tbody>
+</table>
+<br />
+<h3> 3. Attributes </h3>
+
+<br />
+<table class="data">
+<caption>Table Attributes</caption>
+<thead>
+<tr><th>Attribute</th><th>Markup key</th></tr>
+</thead>
+<tfoot>
+<tr><th>Attribute</th><th>Markup key</th></tr>
+</tfoot>
+<tbody>
+<tr><th colspan="2">Core</th></tr>
+<tr><td><tt>id</tt></td><td><tt>i</tt></td></tr>
+<tr><td><tt>title</tt></td><td><tt>t</tt></td></tr>
+<tr><td><tt>class</tt></td><td><tt>c</tt></td></tr>
+<tr><td><tt>style</tt></td><td><tt>s</tt></td></tr>
+<tr><th colspan="2">i18n</th></tr>
+<tr><td><tt>xml:lang</tt></td><td><tt>l</tt></td></tr>
+<tr><td><tt>dir</tt></td><td><tt>d</tt></td></tr>
+<tr><th colspan="2">Table cells</th></tr>
+<tr><td><tt>colspan</tt></td><td><tt>x</tt></td></tr>
+<tr><td><tt>rowspan</tt></td><td><tt>y</tt></td></tr>
+<tr><td><tt>scope</tt></td><td><tt>o</tt></td></tr>
+<tr><td><tt>headers</tt></td><td><tt>h</tt></td></tr>
+<tr><td><tt>abbr</tt></td><td><tt>a</tt></td></tr>
+<tr><td><tt>axis</tt></td><td><tt>z</tt></td></tr>
+<tr><th colspan="2">Other Table elements</th></tr>
+<tr><td><tt>span</tt></td><td><tt>p</tt></td></tr>
+<tr><td><tt>summary</tt></td><td><tt>u</tt></td></tr>
+</tbody>
+</table>
+<br />
+<br />
+<hr />
+
+<a class="" href="./CategoryWiki.html">CategoryWiki</a>
+<div style="clear: both"></div>
+</div>
+<!-- END PAGE CONTENT -->
+<!-- BEGIN COMMENT BLOCK -->
+<div id="comments">
+<div id="commentheader">
+Comments [<a href="./TableMarkupReference.html&amp;show_comments=0">Hide comments/form</a>]
+</div>
+<div id="commentform">
+</div>
+</div>
+<!-- END COMMENT BLOCK -->
+<table align="right"><tr>
+<td align='left' ><a href='http://www.randl.com/shop/catalog/product_info.php?products_id=69422'>R and L Electronics has a TM281A</a><br>KENWOOD TM281A, TM-281A , 2m 65W MOBILE 200 MEMORIES NOAA WEATHER ALERT<br><a href='http://www.kenwoodusa.com/Communications/Amateur_Radio/Mobiles/TM-281A'>RandL has link to Manufacturer info on the TM281A here.</a><br><a href='http://www.eham.net/reviews/detail/9994'>R&L has a link to the Eham review on the TM281A here.</a></td></tr></table>
+<!-- BEGIN PAGE FOOTER -->
+<div id="footer">
+<ul id="options_menu">
+<li><a href="./TableMarkupReference.html/showcode" title="Display the markup for this page">[Source]</a>
+</li>
+<li><a href="./TableMarkupReference.html/history" title="Click to view recent edits to this page">[History]</a>
+
+</li>
+<li><a class="datetime" href="./TableMarkupReference.html/revisions" title="Click to view recent revisions list for this page">2015-03-12 07:23:07</a> <a href="./TableMarkupReference.html/revisions.xml" title="Click to display a feed with the latest revisions to this page"><img src="images/feed.png" class="icon" width="14" height="14" alt="feed icon" /></a>
+</li>
+<li>Owner: <a class="missingpage" href="./ChepeNolon.html/edit" title="Create this page">ChepeNolon</a>
+
+</li>
+</ul>
+</div>
+<!-- END PAGE FOOTER -->
+<!-- BEGIN SYSTEM INFO -->
+<div id="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">WikkaWiki </a>
+
+</div>
+<!-- END SYSTEM INFO -->
+<!--Page was generated in 3.2972 seconds-->
+</div>
+<!-- END PAGE WRAPPER -->
+
+</body>
+</html>

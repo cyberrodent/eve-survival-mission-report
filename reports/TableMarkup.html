@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EVE-Survival: Wikka Table Markup Guide
+</title>
+	<base href="./" />
+	<meta name="generator" content="WikkaWiki" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="Eve missions, R and L Electronics" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/wikka.css?a8278" />
+	<link rel="stylesheet" type="text/css" href="templates/default/css/print.css" media="print" />
+	<link rel="icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: revisions for TableMarkup (RSS)" href="./TableMarkup.html/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="EVE-Survival: recently edited pages (RSS)" href="./TableMarkup.html/recentchanges.xml" />
+</head>
+<body>
+<!-- BEGIN PAGE WRAPPER -->
+<div id="page">
+<!-- BEGIN PAGE HEADER -->
+<div id="header">
+<h2><a id="homepage_link" href="./HomePage.html">EVE-Survival</a> : <a href="./TableMarkup.html/backlinks" title="Display a list of pages linking to TableMarkup">TableMarkup</a></h2>
+<ul id="main_menu">
+<li><a class="" href="./MissionReports.html">MissionReports</a>
+</li>
+<li><a class="" href="./PageIndex.html">PageIndex</a>
+</li>
+<li><a class="" href="./RecentChanges.html">RecentChanges</a>
+</li>
+<li><a class="" href="./RecentlyCommented.html">RecentlyCommented</a>
+</li>
+<li><a class="" href="./UserSettings.html">Login/Register</a>
+</li>
+<li><form action="./TextSearch.html" id="form_c2b696fff2">
+<label for="searchbox">Search: </label><input id="searchbox" name="phrase" size="15" class="searchbox" /><input name="wakka" type="hidden" value="TextSearch" /></form>
+
+</li>
+<li>Your hostname is <tt>207.237.82.100</tt>
+</li>
+</ul>
+</div>
+<!-- END PAGE HEADER -->
+<!-- BEGIN PAGE CONTENT -->
+<div id="content">
+<h2>Wikka Table Markup Guide</h2>
+
+<div class="floatr">
+<h5>See also:</h5>
+
+<ul><li>For earlier Wikka versions, check the table action
+</li><li>Updated versions of this page can be found on the Wikka documentation server 
+</li><li>For a more formal description, check this server's <a class="" href="./TableMarkupReference.html">TableMarkupReference</a> page.</li></ul>
+
+</div>
+<br />
+As of <tt>1.2</tt>, Wikka introduces a flexible markup for data tables. Any kind of tables allowed by XHTML can be created using this markup, from the most basic examples (e.g. simple rows of cells) to complex tables with full support for accessibility options.<div class="clear">&nbsp;</div>
+<br />
+<br />
+<h3>1. Table basics: cells, rows, columns</h3>
+
+<br />
+The most basic element of a table is a <strong>cell</strong>. Single cells can be created using the standard delimiter <tt>||</tt>, e.g.:<br />
+<br />
+<tt>||Hello||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td>Hello</td></tr>
+</tbody>
+</table>
+<br />
+Note that a cell must always be open and closed by delimiters. <br />
+<br />
+<strong>Rows</strong> can be created by adding on the same line multiple cells:<br />
+<br />
+<tt>||Cell 1||Cell 2||Cell 3||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td></tr>
+</tbody>
+</table>
+<br />
+<strong>Columns</strong> can be created by adding rows on separate lines:<br />
+<br />
+<tt>||Cell 1||</tt><br />
+<tt>||Cell 2||</tt><br />
+<tt>||Cell 3||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td>Cell 1</td></tr>
+<tr><td>Cell 2</td></tr>
+<tr><td>Cell 3</td></tr>
+</tbody>
+</table>
+<br />
+By now you should be able to create simple tables with <strong>multiple rows and columns</strong>.<br />
+<br />
+<tt>||Cell 1||Cell 2||Cell 3||</tt><br />
+<tt>||Cell 4||Cell 5||Cell 6||</tt><br />
+<tt>||Cell 7||Cell 8||Cell 9||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td></tr>
+<tr><td>Cell 4</td><td>Cell 5</td><td>Cell 6</td></tr>
+<tr><td>Cell 7</td><td>Cell 8</td><td>Cell 9</td></tr>
+</tbody>
+</table>
+<br />
+<h3>2. Headings</h3>
+
+<br />
+As soon as you create slightly more complex data tables, you will need to specify column and row <strong>headings</strong>. Headings are special cells that specify what kind of data rows and columns contain. The most basic way of creating a heading is by using <tt>|=|</tt> as a delimiter.<br />
+<br />
+The following is an example of a simple table with <strong>column headings</strong>:<br />
+<br />
+<tt>|=|Apples|=|Pears|=|</tt><br />
+<tt>||300Kg||480Kg||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><th>Apples</th><th>Pears</th></tr>
+<tr><td>300Kg</td><td>480Kg</td></tr>
+</tbody>
+</table>
+<br />
+<strong>Row headings</strong> are created in the same way. Since they are usually followed by normal cells, they must be terminated with the <tt>||</tt> standard delimiter if the next element in the row is a simple cell:<br />
+<br />
+<tt>|=|Apples||300Kg||</tt><br />
+<tt>|=|Pears||480Kg||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><th>Apples</th><td>300Kg</td></tr>
+<tr><th>Pears</th><td>480Kg</td></tr>
+</tbody>
+</table>
+<br />
+You should be able by now to create simple tables with row and column headings:<br />
+<br />
+<tt>|=|       |=|Apples|=|Pears|=|</tt><br />
+<tt>|=|Mary||300Kg||320Kg||</tt><br />
+<tt>|=|John||400Kg||630Kg||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><th> </th><th>Apples</th><th>Pears</th></tr>
+<tr><th>Mary</th><td>300Kg</td><td>320Kg</td></tr>
+<tr><th>John</th><td>400Kg</td><td>630Kg</td></tr>
+</tbody>
+</table>
+<br />
+We will describe later how to add accessibility parameters for row and column headings.<br />
+<br />
+<h3>3. Captions</h3>
+
+<br />
+Usually tables are introduced with a caption that describes what the table contains. A caption element is introduced with a <tt>|?|</tt> delimiter and terminated with a standard delimiter <tt>||</tt>.<br />
+<br />
+<tt>|?|Fruit production in 2006||</tt><br />
+<tt>|=|       |=|Apples|=|Pears|=|</tt><br />
+<tt>|=|Mary||300Kg||320Kg||</tt><br />
+<tt>|=|John||400Kg||630Kg||</tt><br />
+<br />
+<table class="data">
+<caption>Fruit production in 2006</caption>
+<tbody>
+<tr><th> </th><th>Apples</th><th>Pears</th></tr>
+<tr><th>Mary</th><td>300Kg</td><td>320Kg</td></tr>
+<tr><th>John</th><td>400Kg</td><td>630Kg</td></tr>
+</tbody>
+</table>
+<br />
+<h3>4. Spans</h3>
+
+<br />
+<strong>Spans</strong> are used to combine multiple cells or multiple headings vertically or horizontally and are created using the following <a class="" href="./TableMarkupReference.html">attribute parameters</a>:<br />
+<br />
+<tt>||(<span class="notes">span options</span>)Element content||</tt><br />
+<br />
+A <strong>cell spanning multiple columns</strong> is generated by prefixing the cell content with a <tt>(x:<span class="notes">n</span>)</tt> parameter, where <tt><span class="notes">n</span></tt> is the number of columns to be spanned. The following example shows how to create a cell spanning two columns:<br />
+<br />
+<tt>||(x:2)Cell spanning 2 columns||Cell 3||</tt><br />
+<tt>||Cell 4||Cell 5||Cell 6||</tt><br />
+<tt>||Cell 7||Cell 8||Cell 9||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td colspan="2">Cell spanning 2 columns</td><td>Cell 3</td></tr>
+<tr><td>Cell 4</td><td>Cell 5</td><td>Cell 6</td></tr>
+<tr><td>Cell 7</td><td>Cell 8</td><td>Cell 9</td></tr>
+</tbody>
+</table>
+<br />
+Spans can also be applied to rows. A <strong>cell spanning multiple rows</strong> is generated by prefixing the cell content with a <tt>(y:<span class="notes">n</span>)</tt> parameter, where  <tt><span class="notes">n</span></tt>  is the number of rows to be spanned. The following example shows how to create a cell spanning two rows:<br />
+<br />
+<tt>||(y:2)Cell spanning 2 rows||Cell 2||Cell 3||</tt><br />
+<tt>||Cell 5||Cell 6||</tt><br />
+<tt>||Cell 7||Cell 8||Cell 9||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td rowspan="2">Cell spanning 2 rows</td><td>Cell 2</td><td>Cell 3</td></tr>
+<tr><td>Cell 5</td><td>Cell 6</td></tr>
+<tr><td>Cell 7</td><td>Cell 8</td><td>Cell 9</td></tr>
+</tbody>
+</table>
+<br />
+Spans are particularly useful to create <strong>subheadings</strong>:<br />
+<br />
+<tt>|?|Fruit production in the last two years||</tt><br />
+<tt>|=|       |=|(x:2)Apples|=|(x:2)Pears|=|</tt><br />
+<tt>|=|       |=|2005|=|2006|=|2005|=|2006|=|</tt><br />
+<tt>|=|Mary||300Kg||320Kg||400kg||280Kg||</tt><br />
+<tt>|=|John||400Kg||630Kg||210Kg||300Kg||</tt><br />
+<br />
+<table class="data">
+<caption>Fruit production in the last two years</caption>
+<tbody>
+<tr><th>       </th><th colspan="2">Apples</th><th colspan="2">Pears</th></tr>
+<tr><th>       </th><th>2005</th><th>2006</th><th>2005</th><th>2006</th></tr>
+<tr><th>Mary</th><td>300Kg</td><td>320Kg</td><td>400kg</td><td>280Kg</td></tr>
+<tr><th>John</th><td>400Kg</td><td>630Kg</td><td>210Kg</td><td>300Kg</td></tr>
+</tbody>
+</table>
+<br />
+Column and row spans can be combined to created funky table layouts:<br />
+<br />
+<tt>||(x:2;y:2)2x2||(x:2)2x1||(y:2)1x2||</tt><br />
+<tt>||(y:2)1x2||1x1||</tt><br />
+<tt>||1x1||1x1||(x:2)2x1||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td colspan="2" rowspan="2">2x2</td><td colspan="2">2x1</td><td rowspan="2">1x2</td></tr>
+<tr><td rowspan="2">1x2</td><td>1x1</td></tr>
+<tr><td>1x1</td><td>1x1</td><td colspan="2">2x1</td></tr>
+</tbody>
+</table>
+<br />
+<br />
+<h3>5. Formatting text within tables</h3>
+
+<br />
+You can use any kind of basic Wikka markup to render text within tables.<br />
+The following example adds basic formatting to cell content:<br />
+<br />
+<tt>|?|Using text formatting within tables||</tt><br />
+<tt>||##Monospaced##||//Italics//||**Bold**||__Underlined__||</tt><br />
+<tt>||''Highlighted''||++Strikethrough++||(x:2)**//Bold italics//**||</tt><br />
+<br />
+<table class="data">
+<caption>Using text formatting within tables</caption>
+<tbody>
+<tr><td><tt>Monospaced</tt></td><td><em>Italics</em></td><td><strong>Bold</strong></td><td><span class="underline">Underlined</span></td></tr>
+<tr><td><span class="notes">Highlighted</span></td><td><span class="strikethrough">Strikethrough</span></td><td colspan="2"><strong><em>Bold italics</em></strong></td></tr>
+</tbody>
+</table>
+<br />
+<h3>6. Adding actions and images within tables</h3>
+
+<br />
+Simple, content-generating actions (including images) can be added within table cells and headings.<br />
+<br />
+<tt>|?|Using actions within tables||</tt><br />
+<tt>||This wiki contains {{countpages}} pages||</tt><br />
+<tt>||{{image url="images/wikka_logo.jpg" class="center" alt="a w" title="w image"}}||</tt><br />
+<tt>||{{color c="red" text="some colored text"}}||</tt><br />
+<br />
+<table class="data">
+<caption>Using actions within tables</caption>
+<tbody>
+<tr><td>This wiki contains <a class="" href="./PageIndex.html" title="Display an alphabetical page index">1195</a> pages</td></tr>
+<tr><td><img class="center" width="169" height="39" src="images/wikka_logo.jpg" alt="a w" title="w image" /></td></tr>
+<tr><td><span style="color: red; ">some colored text</span></td></tr>
+</tbody>
+</table>
+<br />
+<h3>7. Adding links within tables</h3>
+
+<br />
+All the available options to create links can be used within table cells or headings:<br />
+<br />
+<tt>|?|Adding links within tables||</tt><br />
+<tt>||Camelcase links: SandBox||</tt><br />
+<tt>||Escaped camelcase links: &quot;&quot;SandBox&quot;&quot; escaped||</tt><br />
+<tt>||Forced links: [[HomePage main]]||</tt><br />
+<tt>||Interwiki links: Wikipedia:Wikka||</tt><br />
+<tt>||Forced interwiki links: [[Wikipedia:Wikka Wikka article on Wikipedia]]||</tt><br />
+<tt>||External links: http://www.example.com ||</tt><br />
+<tt>||Forced external links: [[http://www.example.com Example.com]]||</tt><br />
+<tt>||Image links: {{image url="images/wizard.gif" alt="wizard" title="Display an index of pages on this wiki" link="PageIndex"}}||</tt><br />
+<br />
+<table class="data">
+<caption>Adding links within tables</caption>
+<tbody>
+<tr><td>Camelcase links: <a class="" href="./SandBox.html">SandBox</a></td></tr>
+<tr><td>Escaped camelcase links: SandBox escaped</td></tr>
+<tr><td>Forced links: <a class="" href="./HomePage.html">main</a></td></tr>
+<tr><td>Interwiki links: Wikipedia:Wikka</td></tr>
+<tr><td>Forced interwiki links: Wikka article on Wikipedia</td></tr>
+<tr><td>External links: <a class="ext" href="http://www.example.com">http://www.example.com</a> </td></tr>
+<tr><td>Forced external links: <a class="ext" href="http://www.example.com">Example.com</a></td></tr>
+<tr><td>Image links: <a class="" href="./PageIndex.html"><img width="200" height="235" src="images/wizard.gif" alt="wizard" title="Display an index of pages on this wiki" /></a></td></tr>
+</tbody>
+</table>
+<br />
+<h3>8. Adding HTML within tables</h3>
+
+<br />
+You can also use embedded HTML in table elements:<br />
+<br />
+<tt>|?|Embedding HTML within tables||</tt><br />
+<tt>||Here's some superscript: &quot;&quot;a&lt;sup&gt;2+1&lt;/sup&gt;&quot;&quot;||</tt><br />
+<tt>||And here's some subscript too: &quot;&quot;a&lt;sub&gt;2k&lt;/sub&gt;&quot;&quot;||</tt><br />
+<tt>||I love acronyms: &quot;&quot;&lt;acronym title="What You See Is What You Get"&gt;WYSIWYG&lt;/acronym&gt;&quot;&quot;||</tt><br />
+<br />
+<table class="data">
+<caption>Embedding HTML within tables</caption>
+<tbody>
+<tr><td>Here's some superscript: a<sup>2+1</sup></td></tr>
+<tr><td>And here's some subscript too: a<sub>2k</sub></td></tr>
+<tr><td>I love acronyms: <acronym title="What You See Is What You Get">WYSIWYG</acronym></td></tr>
+</tbody>
+</table>
+<br />
+<h3>9. Adding a touch of style</h3>
+
+<br />
+The table markup introduces a new <a class="" href="./TableMarkupReference.html">style selector</a>. CSS style options can be added to any element by enclosing them within <strong>single braces</strong>, right before the element content, e.g.:<br />
+<tt>||{<span class="notes">style options</span>}Element content||</tt><br />
+<br />
+For example, to render a cell with <strong>red background</strong> and <strong>white text color</strong>, you can do the following:<br />
+<br />
+<tt>||{background-color:red; color:white}Hello||</tt><br />
+<br />
+<table class="data">
+<tbody>
+<tr><td style="background-color:red; color:white">Hello</td></tr>
+</tbody>
+</table>
+<br />
+You can play with <strong>font size</strong> and <strong>text alignment</strong>:<br />
+<br />
+<tt>|?|Adding some more style||</tt><br />
+<tt>||{font-size:190%; text-align:right}Please scale me!||</tt><br />
+<tt>||{font-size:170%; text-align:right}Please scale me!||</tt><br />
+<tt>||{font-size:150%; text-align:right}Please scale me!||</tt><br />
+<tt>||{font-size:130%; text-align:right}Please scale me!||</tt><br />
+<tt>||{font-size:110%; text-align:right}Please scale me!||</tt><br />
+<tt>||{font-size:90%; text-align:right}Please scale me!||</tt><br />
+<tt>||{font-size:70%; text-align:right}Please scale me!||</tt><br />
+<br />
+<table class="data">
+<caption>Adding some more style</caption>
+<tbody>
+<tr><td style="font-size:190%; text-align:right">Please scale me!</td></tr>
+<tr><td style="font-size:170%; text-align:right">Please scale me!</td></tr>
+<tr><td style="font-size:150%; text-align:right">Please scale me!</td></tr>
+<tr><td style="font-size:130%; text-align:right">Please scale me!</td></tr>
+<tr><td style="font-size:110%; text-align:right">Please scale me!</td></tr>
+<tr><td style="font-size:90%; text-align:right">Please scale me!</td></tr>
+<tr><td style="font-size:70%; text-align:right">Please scale me!</td></tr>
+</tbody>
+</table>
+<br />
+You can also apply style to <strong>headings</strong> and <strong>captions</strong>:<br />
+<br />
+<tt>|?|{border:1px dotted red; color:red}Style can be applied anywhere||</tt><br />
+<tt>|=|{color:#000; font-size:150%; font-style:italic; font-family:Georgia, Hoefler Text, Georgia, serif; font-weight:normal; line-height:150%}Emphemeral Quibus|=|</tt><br />
+<tt>||Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis auctor auctor pede.||</tt><br />
+<br />
+<table class="data">
+<caption style="border:1px dotted red; color:red">Style can be applied anywhere</caption>
+<tbody>
+<tr><th style="color:#000; font-size:150%; font-style:italic; font-family:Georgia, Hoefler Text, Georgia, serif; font-weight:normal; line-height:150%">Emphemeral Quibus</th></tr>
+<tr><td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis auctor auctor pede.</td></tr>
+</tbody>
+</table>
+<br />
+Please note that <strong>style parameters should always follow attribute parameters</strong>, when both are specified for an element (see the <a class="" href="./TableMarkupReference.html">table markup reference</a>):<br />
+<br />
+<tt>|?|Give priority||</tt><br />
+<tt>||(x:2;y:2){background-color:pink}2x2||(x:2){background-color:lightblue}2x1||(y:2){background-color:lightyellow}1x2||</tt><br />
+<tt>||(y:2){background-color:lightyellow}1x2||{background-color:#333;color:white}1x1||</tt><br />
+<tt>||{background-color:lightblue}1x1||{background-color:#333;color:white}1x1||(x:2){background-color:pink}2x1||</tt><br />
+<br />
+<table class="data">
+<caption>Give priority</caption>
+<tbody>
+<tr><td colspan="2" rowspan="2" style="background-color:pink">2x2</td><td colspan="2" style="background-color:lightblue">2x1</td><td rowspan="2" style="background-color:lightyellow">1x2</td></tr>
+<tr><td rowspan="2" style="background-color:lightyellow">1x2</td><td style="background-color:#333;color:white">1x1</td></tr>
+<tr><td style="background-color:lightblue">1x1</td><td style="background-color:#333;color:white">1x1</td><td colspan="2" style="background-color:pink">2x1</td></tr>
+</tbody>
+</table>
+<br />
+<h3>10. Adding style through classes</h3>
+
+<br />
+You can apply existing classes from your stylesheet to any element using the class parameter <tt>(c:<span class="notes">class</span>)</tt>. Note that custom style declarations specified through braced markup override class attributes.<br />
+<br />
+The following example applies to table cells two class selectors defined in the stylesheet. The third row shows how to override a class selector with custom style attributes:<br />
+<br />
+<tt>|?|Using class selectors to add style to table elements||</tt><br />
+<tt>||(c:highlight)This cell uses the ##.highlight## class||</tt><br />
+<tt>||(c:smaller)This cell uses the ##.smaller## class||</tt><br />
+<tt>||(c:smaller){font-size:150%}This cell uses the ##.smaller## class overridden by custom style settings||</tt><br />
+<br />
+<table class="data">
+<caption>Using class selectors to add style to table elements</caption>
+<tbody>
+<tr><td class="highlight">This cell uses the <tt>.highlight</tt> class</td></tr>
+<tr><td class="smaller">This cell uses the <tt>.smaller</tt> class</td></tr>
+<tr><td class="smaller" style="font-size:150%">This cell uses a <tt>.smaller</tt> class overridden by custom style settings</td></tr>
+</tbody>
+</table>
+<br />
+<h3>11. Global table attributes</h3>
+
+<br />
+Table-level attributes can be specified by adding at the beginning of the table the following element: <tt>|!|   ||</tt>, which is used as a container for global table attributes. For example, you can specify <strong>global style options</strong> for a table by adding them to this element:<br />
+<br />
+<tt>|!|{border:3px solid blue; background-color: black; color: white; width: 300px; text-align: center}||</tt><br />
+<tt>||Cell 1||</tt><br />
+<tt>||Cell 2||</tt><br />
+<tt>||Cell 3||</tt><br />
+<br />
+<table class="data" style="border:3px solid blue; background-color: black; color: white; width: 300px; text-align: center">
+<tbody>
+<tr><td>Cell 1</td></tr>
+<tr><td>Cell 2</td></tr>
+<tr><td>Cell 3</td></tr>
+</tbody>
+</table>
+<br />
+<h3>12. Referring to elements: the <tt>id</tt> attribute</h3>
+
+<br />
+<tt>id</tt> attributes are used to refer to unique elements in a page and to provide an anchor for styling and linking. You can specify an <tt>id</tt> for any table element by using the <tt>(i:<span class="notes">id</span>)</tt> parameter.<br />
+<br />
+For example, the following markup creates a table with the <tt>id</tt> "main_table" containing two cells with <tt>id</tt>'s "cell_1" and "cell_2"<br />
+<br />
+<tt>|!|(i:main_table)||</tt><br />
+<tt>|?|Using id to refer to table elements||</tt><br />
+<tt>||(i:cell_1)This cell can be referred to by using the ##cell_1## id||</tt><br />
+<tt>||(i:cell_2)This cell can be referred to by using the ##cell_2## id||</tt><br />
+<br />
+<table class="data" id="main_table">
+<caption>Using id to refer to table elements</caption>
+<tbody>
+<tr><td id="cell_1">This cell can be referred to by using the <tt>cell_1</tt> id</td></tr>
+<tr><td id="cell_2">This cell can be referred to by using the <tt>cell_2</tt> id</td></tr>
+</tbody>
+</table>
+<br />
+<h3>13. Accessibility options: adding titles</h3>
+
+<br />
+Any table element can be given a <tt>title</tt> attribute to enhance its accessibility. Titles are typically displayed in graphical browsers by hovering over the corresponding element and are useful to display unobtrusive descriptions about specific elements. You can specify a <tt>title</tt> for any table element by using the <tt>(t:<span class="notes">title</span>)</tt> parameter.<br />
+<br />
+The following example adds titles to several table elements (you can hover over the table to display them):<br />
+<br />
+<tt>|!|(t:Comparative figures for fruit production in the last year){width: 350px}||</tt><br />
+<tt>|?|Fruit production in 2006||</tt><br />
+<tt>|=|       |=|(t:yearly production of apples)Apples|=|(t:yearly production of pears)Pears|=|</tt><br />
+<tt>|=|(t:Mary's contribution to 2006 production)Mary||(t:Mary's production of apples in 2006){text-align:center}300Kg||(t:Mary's production of pears in 2006){text-align:center}320Kg||</tt><br />
+<tt>|=|(t:John's contribution to 2006 production)John||(t:John's production of apples in 2006){text-align:center}400Kg||(t:John's production of pears in 2006){text-align:center}630Kg||</tt><br />
+<br />
+<table class="data" title="Comparative figures for fruit production in the last year" style="width: 350px">
+<caption>Fruit production in 2006</caption>
+<tbody>
+<tr><th>       </th><th title="yearly production of apples">Apples</th><th title="yearly production of pears">Pears</th></tr>
+<tr><th title="Mary's contribution to 2006 production">Mary</th><td title="Mary's production of apples in 2006" style="text-align:center">300Kg</td><td title="Mary's production of pears in 2006" style="text-align:center">320Kg</td></tr>
+<tr><th title="John's contribution to 2006 production">John</th><td title="John's production of apples in 2006" style="text-align:center">400Kg</td><td title="John's production of pears in 2006" style="text-align:center">630Kg</td></tr>
+</tbody>
+</table>
+<br />
+<h3>14. Accessibility options: adding a summary</h3>
+
+<br />
+Tables can take an optional <tt>summary</tt> attribute to describe the purpose and/or structure of the table. The description provided by the summary attribute is particularly helpful to users of non-visual browsers. You can specify a summary by adding a <tt>(u:<span class="notes">Summary</span>)</tt> parameter in the table global attributes.<br />
+<br />
+For example, the following line:<br />
+<tt>|!|(u:This is a summary)||</tt><br />
+will add to the table a <tt>summary</tt> attribute with the value <tt>This is a summary</tt>.<br />
+<br />
+<h3>15. Accessibility options: table head, table body and table foot</h3>
+
+<br />
+Rows in a table can be grouped in a table head, table body and table foot. This division enables browsers to support scrolling of table bodies independently of the table head and foot. When long tables are printed, the table head and foot information may be repeated on each page that contains table data. The table head and table foot should contain information about the table's columns. The table body should contain rows of table data.<br />
+<br />
+Wikka allows you to create groups of rows with special markers:<br />
+<ul><li> The <tt>|[|</tt> marker groups the rows it precedes as a <strong>table head</strong> block;
+</li><li> The <tt>|]|</tt> marker groups the rows it precedes as a <strong>table foot</strong> block;
+</li><li> The <tt>|#|</tt> marker groups the rows it precedes as a <strong>table body</strong>;</li></ul>
+<br />
+The following example shows how to use these elements to create row groups. Note that Wikka uses different backgrounds to differentiate column headings in the table head and foot from row headings in the table body:<br />
+<br />
+<tt>|!|(u:A table with summary, caption, head, foot and body){width: 400px}||</tt><br />
+<tt>|?|Here's how you can group rows||</tt><br />
+<tt>|[|</tt><br />
+<tt>|=|Name|=|Place|=|Telephone||</tt><br />
+<tt>|]|</tt><br />
+<tt>|=|Name|=|Place|=|Telephone||</tt><br />
+<tt>|#|</tt><br />
+<tt>|=|John Smith||New York||555-1234||</tt><br />
+<tt>|=|Jane Smith||Los Angeles||555-2345||</tt><br />
+<tt>|=|John Doe||Unknown||Unknown||</tt><br />
+<tt>|=|Jane Doe||Unknown||Unknown||</tt><br />
+<br />
+<table class="data" summary="A table with summary, caption, head, foot and body" style="width: 400px">
+<caption>Here's how you can group rows</caption>
+<thead>
+<tr><th>Name</th><th>Place</th><th>Telephone</th></tr>
+</thead>
+<tfoot>
+<tr><th>Name</th><th>Place</th><th>Telephone</th></tr>
+</tfoot>
+<tbody>
+<tr><th>John Smith</th><td>New York</td><td>555-1234</td></tr>
+<tr><th>Jane Smith</th><td>Los Angeles</td><td>555-2345</td></tr>
+<tr><th>John Doe</th><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Jane Doe</th><td>Unknown</td><td>Unknown</td></tr>
+</tbody>
+</table>
+<br />
+<h3>16. Accessibility options: heading scope</h3>
+
+<br />
+To be semantically correct and accessible to users with non-visual browsers, headings should contain scope attributes describing the cell range they refer to. <br />
+<ul><li>Column heading scopes can be specified using the <tt>(o:col)</tt> parameter in the corresponding column heading;
+</li><li>Row heading scopes can be specified using the <tt>(o:row)</tt> parameter in the corresponding row heading;</li></ul>
+<br />
+The following example shows how to correctly add column and row scopes to a table to make it accessible:<br />
+<br />
+<tt>|!|(u:The number of employees and the foundation year of some imaginary companies.)||</tt><br />
+<tt>|?|Table 1: Company data||</tt><br />
+<tt>|[|</tt><br />
+<tt>|||=|(o:col)Employees|=|(o:col)Founded||</tt><br />
+<tt>|#|</tt><br />
+<tt>|=|(o:row)ACME Inc||1000||1947||</tt><br />
+<tt>|=|(o:row)XYZ Corp||2000||1973||</tt><br />
+<br />
+<table class="data" summary="The number of employees and the foundation year of some imaginary companies.">
+<caption>Table 1: Company data</caption>
+<thead>
+<tr><td></td><th scope="col">Employees</th><th scope="col">Founded</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">ACME Inc</th><td>1000</td><td>1947</td></tr>
+<tr><th scope="row">XYZ Corp</th><td>2000</td><td>1973</td></tr>
+</tbody>
+</table>
+<br />
+<br />
+<hr />
+
+<a class="" href="./CategoryWiki.html">CategoryWiki</a>
+<div style="clear: both"></div>
+</div>
+<!-- END PAGE CONTENT -->
+<!-- BEGIN COMMENT BLOCK -->
+<div id="comments">
+<div id="commentheader">
+Comments [<a href="./TableMarkup.html&amp;show_comments=0">Hide comments/form</a>]
+</div>
+<div id="commentform">
+</div>
+</div>
+<!-- END COMMENT BLOCK -->
+<table align="right"><tr>
+<td align='left' ><a href='http://www.randl.com/shop/catalog/product_info.php?products_id=31220'>R and L Electronics has a THF6A</a><br>KENWOOD THF6A, TH-F6A , 2m/1.25m/70cm HT 5W<br><a href='http://www.kenwoodusa.com/Communications/Amateur_Radio/Portables/TH-F6A'>RandL has link to Manufacturer info on the THF6A here.</a><br><a href='http://www.eham.net/reviews/detail/1739'>R&L has a link to the Eham review on the THF6A here.</a></td></tr></table>
+<!-- BEGIN PAGE FOOTER -->
+<div id="footer">
+<ul id="options_menu">
+<li><a href="./TableMarkup.html/showcode" title="Display the markup for this page">[Source]</a>
+</li>
+<li><a href="./TableMarkup.html/history" title="Click to view recent edits to this page">[History]</a>
+
+</li>
+<li><a class="datetime" href="./TableMarkup.html/revisions" title="Click to view recent revisions list for this page">2015-03-12 07:23:07</a> <a href="./TableMarkup.html/revisions.xml" title="Click to display a feed with the latest revisions to this page"><img src="images/feed.png" class="icon" width="14" height="14" alt="feed icon" /></a>
+</li>
+<li>Owner: <a class="missingpage" href="./ChepeNolon.html/edit" title="Create this page">ChepeNolon</a>
+
+</li>
+</ul>
+</div>
+<!-- END PAGE FOOTER -->
+<!-- BEGIN SYSTEM INFO -->
+<div id="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">WikkaWiki </a>
+
+</div>
+<!-- END SYSTEM INFO -->
+<!--Page was generated in 4.6843 seconds-->
+</div>
+<!-- END PAGE WRAPPER -->
+
+</body>
+</html>
